@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: ccac94fc78ccc1a4cba1dc11e9b3d539
+timeCreated: 1489987662
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Love You Heaps
+  fontNames:
+  - Love You Heaps
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

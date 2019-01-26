@@ -1,0 +1,89 @@
+{
+    "scenes": [
+        {
+            "dialogs": [
+                {
+                    "character1": "Vampiro Feliz",
+                    "text": "Para mi fortuna, el día de hoy el café no está rebosando de gente. El olor del café revuelve mi estómago pero la promesa de comodidad me impulsa. Camino hacia las mesas del fondo pero cambio de dirección cuando veo a Miriam leyendo de nuevo. Me acerco a ella.",
+					
+					"_comment":"NOTA: dialogOption en 2 habilita los botones para las opciones del jugador",
+					"dialogOption": 2,
+					"option1":
+					{
+						"text":"Nos encontramos de nuevo.",
+						"next": "Nos encontramos de nuevo."
+					},
+					"option2":
+					{
+						"text":"Buenas tardes Miriam.",
+						"next": "Buenas tardes Miriam."
+					},
+					"option3":
+					{
+						"text":"¿Soy yo o solías verte mejor?",
+						"next": "¿Soy yo o solías verte mejor?"
+					}
+                },
+                {
+					"tag": "Nos encontramos de nuevo.",
+					"character2": "Miriam Neutral",
+					"shader2": true,
+                    "text": "“Nos encontramos de nuevo.” Apoyo mi peso en la silla frente a mí. Miriam levanta la mirada y sonríe con curiosidad."
+                },
+                {
+					"character2": "Miriam Feliz",
+					"shader1": true,
+                    "text": "“¿Has vuelto, <prota>? Pensé que no eras fanático del café.” Mi sonrisa se vuelve más grande."
+                },
+				{
+					"shader2": true,
+                    "text": "“No, del café no. Pero hay otras cosas aquí que me interesan.” En particular, tú casa. Miriam arquea las cejas pero ríe y estira su mano, ofreciendo el asiento.",
+					"next": "A pesar de que he logrado sentarme"
+                },
+				{
+					"tag": "Buenas tardes Miriam.",
+					"character2": "Miriam Neutral",
+					"shader2": true,
+                    "text": "“Buenas tardes, Miriam.” Miriam no responde, sus ojos fijados en la página de su libro. “¿Miriam?” Por fin, voltea."
+                },
+				{
+					"shader2": true,
+                    "text": "“Oh, disculpa. No me di cuenta de que estabas aquí.” Después de unos tensos segundos, rompo el silencio. “¿Puedo sentarme?” Miriam simplemente se encoje de hombros y regresa a su lectura."
+                },
+				{
+					"character1": "Vampiro Enojado",
+					"shader2": true,
+                    "text": "La irritación vuelve mi sonrisa dura pero no hay nada de qué preocuparse. Es obvio que no me está prestando la más mínima atención."
+                },
+				{
+					"character1": "Vampiro Enojado",
+					"shader2": true,
+                    "text": "La irritación vuelve mi sonrisa dura pero no hay nada de qué preocuparse. Es obvio que no me está prestando la más mínima atención.",
+					"next": "A pesar de que he logrado sentarme"
+                },
+				{
+					"tag": "¿Soy yo o solías verte mejor?",
+					"character2": "Miriam Neutral",
+					"shader2": true,
+                    "text": "“¿Soy yo o solías verte mejor?” Miriam deja su libro y voltea a verme con obvia indignación. Aprovechando su sorpresa, tomo el asiento frente a ella. "
+                },
+				{
+					"character2": "Miriam Enojada",
+                    "text": "“¿Disculpa? ¿Cómo te atreves?” Simplemente sonrío. “Disculpa princesa, pero esta mesa no te pertenece.” Es obvio que Miriam busca cambiar de asiento pero la mejor luz se encuentra en este."
+                },
+				{
+					"character2": "Miriam Enojada",
+					"shader2": true,
+                    "text": "Después de un momento, se resigna y continúa leyendo con frustración. A pesar de que mi actitud está siendo contraproducente, no puedo evitarlo. La maldad es parte de mi naturaleza."
+                },
+				{
+					"tag": "A pesar de que he logrado sentarme",
+					"character1": "Vampiro Neutro",
+					"character2": "Miriam Enojada",
+					"shader2": true,
+                    "text": "A pesar de que he logrado sentarme en la mesa de Miriam, no soy el centro de su atención.  En este momento tengo un archienemigo – ese libro. Si quiero que mis planes funcionen debo alejar la atención de Miriam del odioso artículo. La moralidad, la sensatez y la vergüenza no han sido obstáculos para mí así que no hay manera de que seré derrotado por un bloque de papel."
+                }
+            ]
+		}
+    ]
+}

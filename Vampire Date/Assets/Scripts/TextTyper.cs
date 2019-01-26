@@ -1,9 +1,8 @@
-﻿using System.Collections;
+﻿using StorySystem;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public enum LoadTextOption { EndWithArrow, EndWithOptions, EndWithoutArrow };
 
 [RequireComponent(typeof(Text))]
 public class TextTyper : MonoBehaviour
@@ -14,7 +13,7 @@ public class TextTyper : MonoBehaviour
         private set;
     }
     public int textSpeed = 50;
-    public LoadTextOption loadTextOption;
+    public DialogTextOption textOption;
     public GameObject Arrow;
     private TextParser.TextNode[] parsedText;
     private Stack<string> footerStack;
@@ -28,24 +27,27 @@ public class TextTyper : MonoBehaviour
         StartCoroutine(TypeText());
     }
 
-    private void Update()
+  private void Update()
+  {
+    if (ScreenFader.instance == null || ScreenFader.instance.IsFading) return;
+    if (NextEnabled && 
+      (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
     {
-        if (ScreenFader.instance == null || ScreenFader.instance.IsFading) return;
-        if(NextEnabled && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
-        {
-            if(IsTypingText)
-            {
-                StopAllCoroutines();
-                EndTextTyping();
-            }
-            else if(loadTextOption.IsAnyOf(LoadTextOption.EndWithArrow, LoadTextOption.EndWithoutArrow))
-            {
-                NextEnabled = false;
-                Arrow.SetActive(false);
-                SendMessageUpwards("TextTyperNext");
-            }
-        }
+      if(IsTypingText)
+      {
+        StopAllCoroutines();
+        EndTextTyping();
+      }
+      else if(textOption.IsAnyOf(
+        DialogTextOption.EndWithArrow, 
+        DialogTextOption.EndWithoutArrow))
+      {
+        NextEnabled = false;
+        Arrow.SetActive(false);
+        SendMessageUpwards("TextTyperNext");
+      }
     }
+  }
 
     public void ShowText(string value)
     {
@@ -104,19 +106,19 @@ public class TextTyper : MonoBehaviour
     {
         textGUI.text = textCopy;
         IsTypingText = false;
-        switch (loadTextOption)
+        switch (textOption)
         {
-            case LoadTextOption.EndWithArrow:
-                Arrow.SetActive(true);
-                break;
-            case LoadTextOption.EndWithOptions:
-                SendMessageUpwards("ShowButtons");
-                break;
-            case LoadTextOption.EndWithoutArrow:
-                Arrow.SetActive(false);
-                break;
-            default:
-                break;
+          case DialogTextOption.EndWithArrow:
+              Arrow.SetActive(true);
+              break;
+          case DialogTextOption.EndWithoutArrow:
+            Arrow.SetActive(false);
+            break;
+          case DialogTextOption.EndWithOptions:
+              SendMessageUpwards("ShowButtons");
+              break;
+          default:
+              break;
         }
     }
 }

@@ -2,21 +2,37 @@
 using System.IO;
 using UnityEngine;
 
-namespace SurvivalNightStory
+namespace StorySystem
 {
+  public enum DialogTextOption
+  {
+    EndWithArrow,
+    EndWithoutArrow,
+    EndWithOptions,
+    Condition
+  };
+
+  [Serializable]
+  public class ButtonOption
+  {
+    public string text;
+    public string next = "";
+  }
+
   [Serializable]
   public class Dialog
   {
-    public int next = -2;
-    public bool buttons = false;
-    public string image = "";
-    public string message;
-    public LoadTextOption option;
-    public int yes = -1;
-    public string textYes = "";
-    public int no = -1;
-    public string textNo = "";
-    public bool loop = true;
+    public string tag = "";
+    public string text;
+    public string next = "";
+    public string character1 = "";
+    public string character2 = "";
+    public bool shader1 = false;
+    public bool shader2 = false;
+    public DialogTextOption dialogOption = 0;
+    public ButtonOption option1 = null;
+    public ButtonOption option2 = null;
+    public ButtonOption option3 = null;
   }
 
   [Serializable]
@@ -36,17 +52,15 @@ namespace SurvivalNightStory
     {
       var reader = new StreamReader(path);
       string src = reader.ReadToEnd();
+      StoryScript res = null;
 
-      var res = JsonUtility.FromJson<StoryScript>(src);
-      for (int i = 0; i < res.scenes.Length; i++)
+      try
       {
-        for (int j = 0; j < res.scenes[i].dialogs.Length; j++)
-        {
-          if(res.scenes[i].dialogs[j].next == -2)
-          {
-            res.scenes[i].dialogs[j].next = j + 1;
-          }
-        }
+        res = JsonUtility.FromJson<StoryScript>(src);
+      }
+      catch(ArgumentException e)
+      {
+        Debug.LogError(e.Message);
       }
 
       return res;
