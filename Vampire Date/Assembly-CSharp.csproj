@@ -60,9 +60,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scenes\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\Scenes\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scenes\Scripts\Player.cs" />
+    <Compile Include="Assets\ItemNumber.cs" />
+    <Compile Include="Assets\Scripts\ButtonTextEfect.cs" />
+    <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Extenciones.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Item.cs" />
+    <Compile Include="Assets\Scripts\ItemIndex.cs" />
+    <Compile Include="Assets\Scripts\MainControl.cs" />
+    <Compile Include="Assets\Scripts\MainMenuManager.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\ScreenFader.cs" />
+    <Compile Include="Assets\Scripts\StoryScript.cs" />
+    <Compile Include="Assets\Scripts\TextParser.cs" />
+    <Compile Include="Assets\Scripts\TextTyper.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Game-Jam19/Vampire Date/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
