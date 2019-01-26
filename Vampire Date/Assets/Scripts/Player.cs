@@ -9,14 +9,32 @@ public class Player : MonoBehaviour
     Rigidbody2D m_rigidBody;
     Animator m_animator;
 
+    public Item[] m_inventory;
+
     float m_elizabethEmpathy;
     float m_miriamEmpathy;
 
     Vector2 m_direction;
     float m_speed;
 
+    public bool m_isTriggering;
+    public int m_currentItem;
+
     void Start()
     {
+        m_inventory = new Item[]
+        {
+            new Item ("Cupones cafe", false),
+            new Item ("Cartel Disco", false),
+            new Item ("Anillo", false),
+            new Item ("Sombrero", false),
+            new Item ("Pipa", false),
+            new Item ("Bufanda", false),
+            new Item ("Moño", false),
+            new Item ("Collar", false),
+            new Item ("Libro", false)
+        };
+
         m_collider = GetComponent<BoxCollider2D>();
         m_rigidBody = GetComponent<Rigidbody2D>();
         m_sprite = GetComponent<SpriteRenderer>();
@@ -25,7 +43,10 @@ public class Player : MonoBehaviour
         m_elizabethEmpathy = 0.0f;
         m_miriamEmpathy = 0.0f;
 
-        m_speed = 4;
+        m_currentItem = 0;
+        m_isTriggering = false;
+
+        m_speed = 5;
     }
 
     void Movement()
@@ -48,5 +69,42 @@ public class Player : MonoBehaviour
     void Update()
     {
         Movement();
+
+        if (m_isTriggering)
+        {
+            if (Input.anyKeyDown)
+            {
+                m_inventory[m_currentItem].m_isActive = true;
+            }
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag != "left" && other.gameObject.tag != "right")
+        {
+            m_currentItem = other.GetComponent<ItemIndex>().m_index;
+            m_isTriggering = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        m_isTriggering = false;
+
+        if(other.gameObject.tag == "left")
+        {
+
+        }
+
+        if (other.gameObject.tag == "right")
+        {
+
+        }
+    }
+
+    public bool GetItemState(int index)
+    {
+        return m_inventory[index].m_isActive;
     }
 }
