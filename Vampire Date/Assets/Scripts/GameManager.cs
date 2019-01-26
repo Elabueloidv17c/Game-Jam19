@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public Transform m_town;
     public Transform m_cafe;
     public Transform m_disco;
+    public Transform m_directions;
 
     int m_lastScene;
 
@@ -39,6 +40,7 @@ public class GameManager : MonoBehaviour
                     m_bat.transform.position = new Vector3(0, 0, 0);
 
                     m_petyrHouse.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                    m_directions.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
                     m_miriamHouse.gameObject.GetComponent<SpriteRenderer>().enabled = false;
                     m_elizabethHouse.gameObject.GetComponent<SpriteRenderer>().enabled = false;
@@ -54,6 +56,7 @@ public class GameManager : MonoBehaviour
         
                     m_bat.gameObject.SetActive(true);
                     m_bat.transform.position = new Vector3(0, 0, 0);
+                    m_directions.gameObject.GetComponent<SpriteRenderer>().enabled = true;
 
                     m_town.gameObject.GetComponent<SpriteRenderer>().enabled = true;
 
@@ -73,6 +76,7 @@ public class GameManager : MonoBehaviour
                     m_bat.transform.position = new Vector3(0, 0, 0);
 
                     m_cafe.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                    m_directions.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
                     m_petyrHouse.gameObject.GetComponent<SpriteRenderer>().enabled = false;
                     m_miriamHouse.gameObject.GetComponent<SpriteRenderer>().enabled = false;
@@ -90,6 +94,7 @@ public class GameManager : MonoBehaviour
                     m_bat.transform.position = new Vector3(0, 0, 0);
 
                     m_disco.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                    m_directions.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
                     m_petyrHouse.gameObject.GetComponent<SpriteRenderer>().enabled = false;
                     m_miriamHouse.gameObject.GetComponent<SpriteRenderer>().enabled = false;
@@ -107,6 +112,7 @@ public class GameManager : MonoBehaviour
                     m_bat.transform.position = new Vector3(0, 0, 0);
 
                     m_woods.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                    m_directions.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
                     m_petyrHouse.gameObject.GetComponent<SpriteRenderer>().enabled = false;
                     m_miriamHouse.gameObject.GetComponent<SpriteRenderer>().enabled = false;
@@ -124,6 +130,7 @@ public class GameManager : MonoBehaviour
                     m_bat.transform.position = new Vector3(0, 0, 0);
 
                     m_miriamHouse.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                    m_directions.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
                     m_petyrHouse.gameObject.GetComponent<SpriteRenderer>().enabled = false;
                     m_elizabethHouse.gameObject.GetComponent<SpriteRenderer>().enabled = false;
@@ -140,6 +147,7 @@ public class GameManager : MonoBehaviour
                     m_bat.transform.position = new Vector3(0, 0, 0);
 
                     m_elizabethHouse.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                    m_directions.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
                     m_petyrHouse.gameObject.GetComponent<SpriteRenderer>().enabled = false;
                     m_miriamHouse.gameObject.GetComponent<SpriteRenderer>().enabled = false;

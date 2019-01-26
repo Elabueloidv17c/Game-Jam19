@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
         m_currentItem = 0;
         m_isTriggering = false;
 
-        m_speed = 4;
+        m_speed = 5;
     }
 
     void Movement()
@@ -81,13 +81,26 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        m_currentItem = other.GetComponent<ItemIndex>().m_index;
-        m_isTriggering = true;
+        if (other.gameObject.tag != "left" && other.gameObject.tag != "right")
+        {
+            m_currentItem = other.GetComponent<ItemIndex>().m_index;
+            m_isTriggering = true;
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
         m_isTriggering = false;
+
+        if(other.gameObject.tag == "left")
+        {
+
+        }
+
+        if (other.gameObject.tag == "right")
+        {
+
+        }
     }
 
     public bool GetItemState(int index)
