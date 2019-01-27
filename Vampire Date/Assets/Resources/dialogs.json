@@ -589,6 +589,656 @@
 					"character2": "Elizabeth triste"
 				}
 			]
+		},
+		{
+			"dialogs": [
+			{
+				"text": "Regresar al frio suelo del bosque después de un día tan largo no es muy emocionante. Alguien como yo no logra acostumbrarse a las sombras y los ruidos de los árboles. Sin embargo, hoy fue un día productivo –he encontrado mi presa.  \nMiriam\n",
+				"character1": "Vampiro_neutral",
+				"option1":
+				{
+					"text":"Miriam",
+					"next": "Miriam"
+				},
+				"option2":
+				{
+					"text":"Elizabeth",
+					"next": "Elizabeth"
+				}
+			},
+			{
+				"tag": "Miriam",
+				"character2": "Miriam_feliz",
+				"option1":
+				{
+					"text":"Positivo",
+					"next": "Positivo"
+				},
+				"option2":
+				{
+					"text":"Negativo",
+					"next": "Negativo"
+				}
+			},
+			{
+				"tag": "Positivo",
+				"text": "Miriam es una mujer tan culta, tan digna…estoy segura que su casa lo refleja. Y si es así, es el hogar perfecto para mí.",
+				"character2": "Miriam Feliz"
+			},
+			{
+				"tag": "Negativo",
+				"text": "Que chica tan altanera. Parece que toda su gracia y dignidad es solo algo del exterior. Sin embargo, en estos momentos me encantaría tener un hogar con un terrible interior pero una hermosa fachada.",
+				"character2": "Miriam Enojada"
+			},
+			{
+				"tag": "Elizabeth",
+				"character2": "Elizabeth Feliz",
+				"option1":
+				{
+					"text":"Positivo2",
+					"next": "Positivo2"
+				},
+				"option2":
+				{
+					"text":"Negativo2",
+					"next": "Negativo2"
+				}
+			},
+			{
+				"tag": "Positivo2",
+				"text": "Es casi imposible que una chica tan inocente e ingenua como Elizabeth haya llegado a la adultez.  Estoy seguro de que su hogar es tan dulce y cálido como ella. Casi siento lástima por ella.",
+				"character2": "Elizabeth Feliz"
+			},
+			{
+				"tag": "Negativo2",
+				"text": "Elizabeth no podría ser una chica menos especial, mezclándose entre las demás. Sin embargo, tengo la esperanza de que tiene una casa apropiada a mis especificaciones.",
+				"character2": "Elizabeth Enojada"
+			},
+			{
+				"text": "Dos finas damas, dos casas esperando para volverse mi nuevo hogar. ¿Pero a quien elegir?",
+				"character1": "Vampiro Neutro",
+				"option1": "Miriam",
+				"option2": "Elizabeth"
+			},
+			{
+				"text": "Querida <chica> , espero que sepas que no es nada personal.",
+				"character1": "Vampiro Feliz"
+			}
+    ]	
+		},	
+		{	
+			"dialogs": [
+			{
+				"text": "Si quiero ser exitoso esta noche, tengo que hacer todo lo posible para capturar el corazón de ((chica elegida)). Podría comprar algún regalo en las tiendas del pueblo o explorar el lugar por mí mismo…",
+				"character1": "vampiro neutro"
+			},
+			{
+				"text": "Siendo una ciudad tan pequeña, no hay gran selección de regalos. Dicho eso, siento que encontrare algo perfecto para complacer a una frívola humana. Pero debo tener cuidado…no quisiera que mi regalo tuviera el efecto opuesto.",
+				"character1": "vampiro neutro"
+			},
+			{
+				"text": "Siendo una ciudad tan pequeña, no hay gran selección de regalos. Dicho eso, siento que encontrare algo perfecto para complacer a una frívola humana. Pero debo tener cuidado…no quisiera que mi regalo tuviera el efecto opuesto.",
+				"character1": "vampiro neutro"
+			},
+			{
+				"tag": "Bufanda",
+				"text": "Es una bufanda. Parece hecha de buena calidad. Perfecta para una chica segura"
+			},
+			{
+				"tag": "Moño",
+				"text": "Es un moño hecho de listón. Su color tan brillante me recuerda a las niñas pequeñas de mi antiguo hogar."
+			},
+			{
+				"tag": "Collar",
+				"text": "Es un collar sencillo pero lindo. Su colgante es sutilmente llamativo. Un regalo casual pero encantador."
+			},
+			{
+				"tag": "Libro",
+				"text": "Un libro del famoso autor Salim. No lo he leído personalmente, pero tiene buenas reseñas."
+			},
+			{
+				"text": "Puede que esta ciudad no haya sido mi primera opción, pero estoy seguro que un inteligente e intrépido vampiro como yo será capaz de encontrar algo de valor."
+			},
+			{
+				"tag": "Anillo",
+				"text": "Es un anillo brillante y parece tener mucho valor. Estoy seguro que alguna otra dama humana lo está buscando con desesperación. Desafortunadamente para ella y afortunadamente para mí, no va a poder encontrarlo."
+			},
+			{
+				"tag": "Pipa",
+				"text": "Es una pipa. Ya hace tiempo que vi una de estas. Parece que todavía tiene tabaco…",
+				"option1": "¿Fumar?"
+			},
+			{
+				"tag": "¿Fumar?",
+				"option1": "Si",
+				"option2": "No",
+				"Notas": "Si (-1 con las dos) / No"
+			},
+			{
+				"tag": "El Mejor Sombrero",
+				"text": "No puedo creerlo! ¿Quién pensaría que en un basurero como este encontraría una joya como esta? Solo ver esta hermosura me llena de seguridad y confianza. No hay manera de que mi plan falle ahora",
+				"character1": "vampiro feliz"
+			},
+			{
+				"text": "Perfecto! Ahora no hay manera de que mi plan pueda fallar. Esta noche, no dormiré en el bosque. Ha ha…ha HA HA HA.",
+				"character1": "vampiro feliz"
+			}
+		]
+		},
+		{
+			"dialogs": [
+			{
+				"tag": "Disco",
+				"text": "Esta noche, la disco está viva con la energía de los jóvenes de la ciudad. La vitalidad parece recorrer la habitación, tocando a cada una de las personas en el edificio. Puede que mi corazón se haya detenido hace cientos de años, pero los latidos de las personas a mi alrededor llenan el vacío en mi pecho.",
+				"character1": "Vamp Neutro"
+			},
+			{
+				"text": "En el centro de la pista esta Elizabeth bailando de nuevo. A diferencia de su gentil y recatada personalidad, sus movimientos son atrevidos. Son el tipo de movimientos que se verían terribles si se hacen con vacilación, como poner un candelabro Luis XV en una sala minimalista. Es la confianza, la seguridad del artista que lo vuelve hermoso.",
+				"character1": "Vamp Feliz",
+				"character2": "Elizabeth Feliz",
+				"shader2": true
+			},
+			{
+				"text": "Camino hacia ella, pero es más difícil de la usual con la multitud. Estoy a punto de alcanzarla cuando la canción cambia y los danzantes enloquecen. En su fervor, un joven empuja a Elizabeth.",
+				"character1": "Vamp Neutro",
+				"character2": "Elizabeth Triste",
+				"option1": "Proteger a Elizabeth",
+				"option2": "Unirse al baile.",
+				"option3": "Subir a una mesa.",
+				"Notas": "Elizabeth +1"
+			},
+			{
+				"tag": "Proteger a Elizabeth",
+				"text": "Impulsándome sobre mis pies, logro alcanzar a Elizabeth en el momento justo. Mi mano se cierra alrededor de su antebrazo, firme pero gentil. Elizabeth levanta la vista y sonríe al verme. Se endereza, avergonzada. “Muchas gracas, <prota>.”",
+				"character1": "Vamp Feliz",
+				"character2": "Elizabeth Feliz"
+			},
+			{
+				"tag": "Unirse al baile.",
+				"text": "En una multitud como esta, no tiene sentido tratar de ir contra la corriente. Me uno a los demás, bailando con el ritmo de la canción. Nos movemos juntos, unidos por el amor a la danza. Eventualmente, choco con alguien y al voltear me doy cuenta de que es Elizabeth.",
+				"character1": "Vamp Feliz"
+			},
+			{
+				"text": "“Oh, Elizabeth! Que gusto vernos de nuevo.” Elizabeth no parece compartir mis sentimientos. Se ve un poco abrumada, su cabello despeinado y sus mejillas rojas con el esfuerzo de mantenerse de pie. “Oh…Hola, <prota>.”",
+				"character1": "Vamp Feliz",
+				"character2": "Elizabeth Triste",
+				"Notas": "-1"
+			},
+			{
+				"tag": "Subir a una mesa.",
+				"text": "Lidiar con esta multitud será imposible. Es mejor encontrar tierra alta y tratar de llamar la atención de Elizabeth desde ahí. Encuentro una mesa y me paro sobre ella. “Elizabeth, Elizabeth!” Agito los brazos, tratando de llamar su atención pero no hay efecto.",
+				"character1": "Vamp Feliz",
+				"character2": "Elizabeth Triste",
+				"shader2": true
+			},
+			{
+				"text": "Algo me dice que esto no fue el mejor plan. Resignado, llego a ella de la manera lenta y difícil. Elizabeth parece feliz de verme, pero no puedo corresponder su entusiasmo después mi humillación.",
+				"character1": "Vamp Triste",
+				"character2": "Elizabeth Triste"
+			},
+			{
+				"text": "Es obvio que progresar en nuestra relación será imposible en el centro de la pista, así que guio a Elizabeth hacia una de las mesas. Por fortuna, estamos a una distancia decente de las bocinas y podemos hablar con comodidad.",
+				"character1": "Vamp Neutro",
+				"character2": "Elizabeth Neutro",
+				"shader2": true
+			},
+			{
+				"text": "“¿Por qué no me sorprende verte aquí de nuevo?” le pregunto. Elizabeth agacha la cabeza un tanto avergonzada, pero está sonriendo. “¿Qué puedo decir? Me gusta bailar.” Rio junto con ella por un momento. “Eso es bueno, Elizabeth. Es importante tener pasiones en la vida.”",
+				"character1": "Vamp Feliz",
+				"character2": "Elizabeth Feliz"
+			},
+			{
+				"text": "La mirada de Elizabeth se vuelve curiosa. “¿Y tú, <prota>? ¿Cuál es tu pasión? Algo me dice que no te gusta bailar tanto como a mí.” Su comentario me toma por sorpresa. No por ofender a Elizabeth, que es una joven encantadora (y con una casa potencialmente hermosa), pero no me había dado la impresión de ser particularmente inquisitiva.",
+				"character1": "Vamp Feliz",
+				"character2": "Elizabeth Feliz",
+				"option1": "Mi pasión es el diseño de interiores.",
+				"option2": "Mi pasión también es la danza.",
+				"option3": "Evadir la pregunta."
+			},
+			{
+				"tag": "Mi pasión es el diseño de interiores.",
+				"text": "Dudo por un momento antes de contestar, pero opto por la honestidad. “Sonara un poco extraño pero…mi pasión es el diseño de interiores.” Es un momento curioso. Si las cosas salen como yo espero, para el día de mañana Elizabeth estará muerta y mi secreto morirá con ella. Por alguna razón, el pensamiento no me trae la paz que espero.",
+				"character1": "Vamp Neutro",
+				"character2": "Elizabeth Neutra",
+				"shader2": true,
+				"Notas": "1"
+			},
+			{
+				"text": "Elizabeth parece iluminarse al escuchar mis palabras. “Que fascinante! Supongo que tiene sentido.” Elizabeth esconde una sonrisa detrás de su mano. “Oh?” De nuevo, me toma por sorpresa. “Pues…es decir…es obvio que eres una persona con mucho estilo.”",
+				"character1": "Vamp Feliz",
+				"character2": "Elizabeth Feliz"
+			},
+			{
+				"text": "Es casi una lástima que la sangre no corre por mis venas porque estoy segura que mi sonrojo habría divertido a Elizabeth. Agacho la cabeza, alagado. Es muy tarde para cambiar… pero por un momento siento verdadera culpa.",
+				"character1": "Vamp Triste",
+				"character2": "Elizabeth Feliz",
+				"shader2": true
+			},
+			{
+				"tag": "Mi pasión también es la danza.",
+				"text": "No hay punto en hablar con honestidad. Con suerte, Elizabeth morirá esta noche así que mi prioridad tiene que ser agradarle. “En realidad, mi pasión también es la danza.”",
+				"character1": "Vamp Neutro",
+				"character2": "Elizabeth Neutro",
+				"shader2": true
+			},
+			{
+				"text": "“Oh… ¿enserio?” Por alguna razón, mi respuesta parece no convencer a Elizabeth. Trato de mantener un tono casual. “¿Dudas de mi, Elizabeth?” Inmediatamente, Elizabeth se sonroja. “N-No, claro que no! Solo me…sorprende, supongo.” No tengo respuesta para eso. Un silencio tenso se extiende entre los dos.",
+				"character1": "Vamp Neutro",
+				"character2": "Elizabeth Triste"
+			},
+			{
+				"tag": "Evadir la pregunta",
+				"text": "Si quiero que la noche sea un éxito es importante evitar que la situación se vuelva muy personal. Sin pensarlo ni un segundo, trepo sobre la mesa y comienzo a bailar.",
+				"character1": "Vamp Feliz",
+				"character2": "Elizabeth Neutra",
+				"shader2": true,
+				"Notas": "-1"
+			},
+			{
+				"text": "Volteo hacia abajo y noto que Elizabeth se ve escandalizada, su rostro Colorado por toda la sangre de su cuerpo. Decido ahorrarnos a ambos la humillación y bajo de la mesa con cuidado. Tras unos largos minutos de Elizabeth evadiendo mi mirada, solo pregunta una cosa. “¿Por qué?” No le respondo.",
+				"character1": "Vamp Neutra",
+				"character2": "Elizabeth Neutra",
+				"Notas": "SI COLECTASTE ALGUN OBJETO/OBSEQUIO"
+			},
+			{
+				"text": "Parece que las cosas están avanzando bastante bien así que es hora de asegurar que mi presa no vaya a escapar. Estoy seguro que mi obsequio será más que suficiente.",
+				"character1": "Vamp Feliz",
+				"character2": "Elizabeth Neutra",
+				"shader2": true
+			},
+			{
+				"text": "“Elizabeth, espero que no pienses que esto es demasiado presuntuoso de mi parte, pero vi esto y no pude evitar pensar en ti.”"
+			},
+			{
+				"text": "“Oh, <prota>, me encanta! ¿Pero estas seguro de que quieres darme algo tan lindo?” Mi sonrisa se vuelve mas grande. “Por supuesto, Elizabeth. Lo escogí especialmente para ti, después de todo.” Después de un momento, Elizabeth toma su regalo de mis manos.",
+				"character1": "Vamp Feliz",
+				"character2": "Elizabeth Feliz",
+				"Notas": "Ruta positiva"
+			},
+			{
+				"text": "“Oh, <prota>…gracias pero…no estoy segura si debería aceptar esto.” Elizabeth se ve incomoda. “No es como que no me guste, claro! Simplemente…no tengo un regalo para ti. Lo lamento.” Avergonzado y más que un poco molesto, pongo el regalo de vuelta en mi bolsillo.",
+				"character1": "Vamp Feliz",
+				"character2": "Elizabeth Triste"
+			},
+			{
+				"text": "La pista ha comenzado a despejarse, así que tomo la mano de Elizabeth y la guio hasta el centro. Justo cuando vamos a comenzar a bailar, la música cambia a un ritmo mucho más lento. Elizabeth me observa con timidez, sus ojos brillando con la más sutil expectativa.",
+				"character1": "Vamp Neutro",
+				"character2": "Elizabeth Feliz",
+				"option1": "Bailar juntos.",
+				"option2": "Volver a la mesa.",
+				"option3": "Ignorar la música y bailar como antes."
+			},
+			{
+				"tag": "Bailar juntos",
+				"text": "Le sonrío a Elizabeth, colocando sus manos alrededor de mi cuello. Elizabeth parece estar complacida. Bailamos juntos, siguiente el ritmo de la música. Por un momento, siento que somos los únicos en toda la pista – no, en todo el edificio.",
+				"character1": "Vamp Feliz",
+				"character2": "Elizabeth Feliz",
+				"Notas": "1"
+			},
+			{
+				"text": "En este momento, somos solo ella y yo en todo el mundo. Me pone algo triste pensar que a esta hora mañana, estaré solo.",
+				"character1": "Vamp Triste",
+				"character2": "Elizabeth Feliz",
+				"shader2": true
+			},
+			{
+				"text": "Pero viendo el lado positivo, estaré en una bella casa.",
+				"character1": "Vamp Triste",
+				"character2": "Elizabeth Feliz",
+				"shader2": true
+			},
+			{
+				"tag": "Volver a la mesa",
+				"text": "Algo me dice que bailar con Elizabeth no es la decisión correcta. Rompo el contacto visual con la mayor sutileza posible. “Sabes Elizabeth, creo que es mejor esperar a que la música buena regrese,” y camino hacia la mesa.",
+				"character1": "Vamp Neutro",
+				"character2": "Elizabeth Neutra",
+				"shader2": true,
+				"Notas": "-1"
+			},
+			{
+				"text": "“Oh….supongo que tienes razón.” Trato de ignorar la decepción en su voz.”",
+				"character1": "Vamp Neutro",
+				"character2": "Elizabeth triste",
+				"shader1": true
+			},
+			{
+				"tag": "Ignorar la música y bailar como antes.",
+				"text": "Dejarse regir por el ritmo de la música es para débiles y humanos! Antes de que pueda pensarlo demasiado, comienzo a bailar con toda mi energía. Es sorpresivamente fácil ignorar las miradas de los demás danzantes.",
+				"character1": "Vamp Feliz",
+				"character2": "Elizabeth neutra",
+				"shader2": true
+			},
+			{
+				"text": "Trato de tomar la mano de Elizabeth e incitarla a seguir mi ejemplo, pero ella se aleja. Parece estar avergonzada por mis acciones. Es una lástima, pero siempre he vivido para complacer a una sola persona – a mi mismo. Con una sonrisa, continúo bailando.",
+				"character1": "Vamp Feliz",
+				"character2": "Elizabeth triste",
+				"shader2": true
+			},
+			{
+				"text": "El tiempo pasa, y decido ir por una bebida para Elizabeth a la barra.",
+				"character1": "Vamp neutro",
+				"option1": "Agua de sabor.",
+				"option2": "Cerveza.",
+				"option3": "Seguir bailando."
+			},
+			{
+				"tag": "Agua de sabor",
+				"text": "Entre la selección de bebidas, decido llevarlo un agua de sabor. Elizabeth la recibe con una sonrisa.",
+				"character1": "Vamp Neutro",
+				"character2": "Elizabeth Feliz",
+				"shader2": true,
+				"Notas": "1+"
+			},
+			{
+				"tag": "Cerveza",
+				"text": "Compro una cerveza para Elizabeth. Cuando regreso a la mesa, se ve un poco incomoda. La acepta, pero no parece particularmente feliz.",
+				"character1": "Vamp Nuetro",
+				"character2": "Elizabeth triste",
+				"shader2": true
+			},
+			{
+				"tag": "Seguir bailando.",
+				"text": "Ahora que lo pienso, estoy cansado de desvivirme por complacer a Elizabeth. Voy a seguir bailando un rato más. Además, si yo no voy a satisfacer mi sed, no veo porque ella sí.",
+				"character1": "Vamp Feliz",
+				"character2": "Elizabeth triste",
+				"shader2": true,
+				"Notas": "-1"
+			},
+			{
+				"text": "A pesar de la diversión, la noche inevitablemente llega a su final. Elizabeth y yo caminamos juntos a la salida con el resto de los jóvenes. Cuando llega la hora de despedirnos, volteo apara hablar con Elizabeth. Al voltear, me doy cuenta que ella también me está mirando. “¿Quieres ir a mi casa?”",
+				"character1": "Vamp Feliz",
+				"character2": "Elizabeth Feliz",
+				"option1": "Me encantaría, Elizabeth.",
+				"option2": "Okay.",
+				"option3": "No estoy seguro."
+			},
+			{
+				"tag": "Me encantaría, Elizabeth",
+				"text": "Tomando la mano de Elizabeth, sonrío mientras la miro a los ojos. “Me encantaría, Elizabeth.” Elizabeth no responde, pero puedo ver como la felicidad ilumina sus brillantes ojos.",
+				"character1": "Vamp Feliz",
+				"character2": "Elizabeth Feliz",
+				"Notas": "1+"
+			},
+			{
+				"tag": "Okay.",
+				"text": "“Okay.” No hay mucho más que decir, así que gesticulo con la mano para que me muestre el camino a su casa. Elizabeth parece un poco impactada, pero después de unos momentos comienza a caminar en dirección a su hogar. Por alguna razón, mi entusiasmo por lo que estoy a punto de hacer ha bajado casi completamente. Menos que una caza, esto se ha convertido en una tarea.",
+				"character1": "Vamp Triste",
+				"character2": "Elizabeth Feliz"
+			},
+			{
+				"character1": "Vamp Triste",
+				"character2": "Elizabeth Feliz",
+				"shader2": true
+			},
+			{
+				"tag": "No estoy seguro.",
+				"text": "“No estoy seguro, no te parece muy pronto para eso?” La cara de Elizabeth se vuelve pálida con angustia. La dejo sufrir unos segundos antes de soltarme riendo. “Claro que es una broma, TONTA.” ¿Soy yo, o sus ojos se ven llorosos? “Bueno, muéstrame el camino.” Sin palabras, Elizabeth comienza a caminar.",
+				"character1": "Vamp Feliz",
+				"character2": "Elizabeth Triste",
+				"shader2": true,
+				"Notas": "-1"
+			},
+			{
+				"tag": "Casa de Elizabeth",
+				"text": "Elizabeth y nos detenemos frente a una casa esférica. La figura es una sorpresa placentera. No lo habría imaginado, pero parece complementar a Elizabeth perfectamente. Ella toma sus llaves, abre la puerta y voltea hacia mí.",
+				"character1": "Vamp Neutro",
+				"character2": "Elizabeth Neutra",
+				"shader2": true
+			},
+			{
+				"text": "En el segundo que le toma a Elizabeth abrir la boca, puedo ver mi futuro claramente. Esta adorable casa será mía mañana. El bosque y yo nos despediremos de una vez por todas. Mi vida volverá a ser feliz.",
+				"character1": "Vamp Feliz",
+				"character2": "Elizabeth Neutra",
+				"shader2": true
+			},
+			{
+				"text": "Mañana, Elizabeth no estará aquí. El triunfo corre por mis venas, pero es sorpresivamente amargo.",
+				"character1": "Vamp Triste",
+				"character2": "Elizabeth Neutra",
+				"shader2": true
+			},
+			{
+				"text": "“Adelante, <prota>.” Es duro ver a Elizabeth a los ojos, viéndose tan inocente como una niña. Por primera vez en mucho tiempo, mi garganta se siente apretada. Le doy una tensa sonrisa y entro sin palabras, esperando el momento en que la puerta se cierre detrás de nosotros.",
+				"Notas": "Final bueno"
+			},
+			{
+				"text": "La casa es perfecta. Es pequeña pero adorable, con varios cuartos perfectos para decorar y una amplia cocina. Me enorgullece saber que elegí bien con Elizabeth. Tomará un tiempo deshacerme de su ropa y sus fotos en las paredes, pero cuando termine, lograre que esta casa se convierta en un hogar perfecto para mí.",
+				"character1": "Vamp Feliz",
+				"Notas": "Imagen de final"
+			},
+			{
+				"text": "Y sobre el Elizabeth…prometo haberle causado el menor dolor posible. Puede que no mereciera su destino, pero yo tampoco merecía el mío. Es el ciclo de la vida. Con el tiempo, el mundo olvidara a Elizabeth."
+			},
+			{
+				"text": "...Pero algo me dice que yo no."
+			},
+			{
+				"text": "“¿Sabes qué? Estoy muy cansada hoy, ¿Por qué no vuelves otro día?” La observo en silencio por un largo tiempo. Elizabeth comienza a agitarse, jugando con sus manos. “No es nada personal, <prota>, solo estoy cansada.”",
+				"character1": "Vamp Neutro",
+				"character2": "Elizabeth Neutra",
+				"shader1": true,
+				"Notas": "Final malo"
+			},
+			{
+				"text": "“¿Elizabeth, porque no solo me dejas entrar? No tenemos que hacer nada. Podemos solo hablar.” A pesar de que trato de mantener mi tono amigable, hago algo mal porque Elizabeth pasa de agitada a aterrorizada. Pero más que eso, está molesta. Con una fuerza que nunca había visto en ella, me dice “No, quiero que te vayas,” firmemente y estrella la puerta en mi cara.",
+				"character1": "Vamp Enojado",
+				"character2": "Elizabeth Enojada",
+				"Notas": "imagen final"
+			},
+			{
+				"text": "Sentado en la banqueta frente a su casa, reflexiono sobre la situación. Todo parecía estar yendo tan bien y ahora…nada. ¿Sera esto una señal de que mi plan no es el camino correcto? ¿En qué me equivoque? No lo sé, pero algo es seguro…",
+				"character1": "Vamp Enojado"
+			},
+			{
+				"text": "Hoy dormiré en el bosque de nuevo.",
+				"character1": "Vamp Triste"
+			}
+		]
+		},
+		{
+			"dialogs": [
+			{
+				"tag": "Café",
+				"text": "Para mi fortuna, el día de hoy el café no está rebosando de gente. El olor del café revuelve mi estómago pero la promesa de comodidad me impulsa. Camino hacia las mesas del fondo pero cambio de dirección cuando veo a Miriam leyendo de nuevo. Me acerco a ella.",
+				"character1": "Vampiro Feliz",
+				"option1": "Nos encontramos de nuevo",
+				"option2": "Buenas tardes Miriam.",
+				"option3": "¿Soy yo o solías verte mejor?"
+			},
+			{
+				"tag": "Nos encontramos de nuevo.",
+				"text": "“Nos encontramos de nuevo.” Apoyo mi peso en la silla frente a mí. Miriam levanta la mirada y sonríe con curiosidad.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Neutral",
+				"shader2": true
+			},
+			{
+				"text": "“¿Has vuelto, Vampiro? Pensé que no eras fanático del café.” Mi sonrisa se vuelve más grande.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Feliz",
+				"shader1": true
+			},
+			{
+				"text": "“No, del café no. Pero hay otras cosas aquí que me interesan.” En particular, tú casa. Miriam arquea las cejas pero ríe y estira su mano, ofreciendo el asiento.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Feliz",
+				"shader2": true
+			},
+			{
+				"tag": "Buenas tardes, Miriam",
+				"text": "“Buenas tardes, Miriam.” Miriam no responde, sus ojos fijados en la página de su libro. “¿Miriam?” Por fin, voltea.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"text": "“Oh, disculpa. No me di cuenta de que estabas aquí.” Después de unos tensos segundos, rompo el silencio. “¿Puedo sentarme?” Miriam simplemente se encoje de hombros y regresa a su lectura.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"text": "La irritación vuelve mi sonrisa dura pero no hay nada de qué preocuparse. Es obvio que no me está prestando la más mínima atención.",
+				"character1": "Vampiro enojado",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"tag": "¿Soy yo o solías verte mejor?",
+				"text": "“¿Soy yo o solías verte mejor?” Miriam deja su libro y voltea a verme con obvia indignación. Aprovechando su sorpresa, tomo el asiento frente a ella.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"text": "“¿Disculpa? ¿Cómo te atreves?” Simplemente sonrío. “Disculpa princesa, pero esta mesa no te pertenece.” Es obvio que Miriam busca cambiar de asiento pero la mejor luz se encuentra en este.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Enojada"
+			},
+			{
+				"text": "Después de un momento, se resigna y continúa leyendo con frustración. A pesar de que mi actitud está siendo contraproducente, no puedo evitarlo. La maldad es parte de mi naturaleza.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Enojada",
+				"shader2": true
+			},
+			{
+				"text": "A pesar de que he logrado sentarme en la mesa de Miriam, no soy el centro de su atención. En este momento tengo un archienemigo – ese libro. Si quiero que mis planes funcionen debo alejar la atención de Miriam del odioso artículo. La moralidad, la sensatez y la vergüenza no han sido obstáculos para mí así que no hay manera de que seré derrotado por un bloque de papel.",
+				"character1": "Vampiro Neutro",
+				"character2": "Miriam Enojada",
+				"shader2": true,
+				"option1": "¿Qué estás leyendo esta vez?",
+				"option2": "Otra vez leyendo, ¿eh?",
+				"option3": "Deja eso."
+			},
+			{
+				"tag": "¿Qué estás leyendo esta vez?",
+				"text": "“¿Qué estás leyendo esta vez?” El libro de hoy es diferente al del día anterior. Mi corazón baila con la idea de un enorme librero adornando la sala de Miriam. Una mujer tan bella y tan culta inevitablemente ha de tener una morada bien decorada, con organización intachable. Por un momento, me pierdo en mis sueños de salas y comedores.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"text": "“Es Voga. Salió apenas hace dos días” La cara de Miriam se ilumina al hablar. “Es de mi autor favorito, Mariano Maldonado.” Parece ser que somos dos soñadores – ella de libros y yo de decoración de interiores.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Feliz",
+				"shader2": true
+			},
+			{
+				"tag": "Otra vez leyendo, eh?",
+				"text": "“Otra vez leyendo, eh?” Al hablar, escucho la más sutil nota de desesperación en mi voz. Si fuera un humano, tendría que controlar mi respiración. No puedo ponerme nervioso en estos momentos – mi futuro depende de ello.",
+				"character1": "Vampiro Neutro",
+				"character2": "Miriam Neutro",
+				"shader2": true
+			},
+			{
+				"text": "“Si, suelo leer.” Miriam no suena impresionada ni levanta la lista de la página. Es difícil suprimir un suspiro.",
+				"character1": "Vampiro Triste",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"tag": "Deja eso.",
+				"text": "“Deja eso.” Estiro mi brazo, tomando el libro de entre sus manos y se lo arrebato en un momento de sorpresa. Volteo las paginas sin cuidado, admirando la portada y el papel de alta calidad.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"text": "“Hey! Devuélveme eso!” Jugar con su libro es bastante entretenido, pero puedo sentir que si no cedo la situación va a empeorar. Volteando los ojos, le regreso el libro. Miriam me lo arrebata bruscamente y lo mete a su bolso, protegiéndolo de mí.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Enojada"
+			},
+			{
+				"text": "Miriam no es una persona muy platicadora pero su aura es abierta y amigable, como una habitación minimalista con grandes ventanas. Si juego bien mis cartas, disfrutare de la vista mañana.",
+				"character1": "Vampiro Neutro",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"tag": "Reaccion a regalos",
+				"text": "Es hora de sacar mi arma secreta. “Vi esto y me recordó a ti, Miriam.”",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"tag": "Positivo",
+				"text": "“Oh, wow! ¿Dónde encontraste esto?” Miriam sonríe. “Me encanta, gracias.”",
+				"character1": " Vampiro Feliz",
+				"character2": "Miriam Feliz",
+				"shader1": true
+			},
+			{
+				"tag": "Negativo",
+				"text": "“Oh…gracias.” Miriam lo observa con desdén. No hace ningún movimiento por tomarlo de mi mano.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Triste",
+				"shader1": true
+			},
+			{
+				"text": "Creo que el regalo ha sido un fracaso.",
+				"character1": "Vampiro Triste",
+				"character2": "Miriam Triste",
+				"shader2": true
+			},
+			{
+				"text": "Después de un momento, me levanto para comprar algo.",
+				"option1": "Comprar un café para Miriam",
+				"option2": "Comprar una galleta para Miriam",
+				"option3": "Comprar dos tés helados para mí"
+			},
+			{
+				"tag": "Comprar un café para Miriam",
+				"text": "Cuando regreso a la mesa de Miriam, coloco la taza frente a ella. “Para ti.” Miriam ojea la taza un momento antes de levantarla y tomar un trago. Sin romper el contacto visual, Miriam me sonríe. “Es mi favorito, gracias.”",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Feliz",
+				"shader1": true
+			},
+			{
+				"tag": "Comprar una galleta para Miriam",
+				"text": "Cuando regreso a la mesa de Miriam, coloco la galleta frente a ella. “Para ti.” Miriam ve la galleta y su expresión se llena de culpa. “Oh, Alan, muchas gracias pero no puedo comerla, soy alérgica al gluten.”",
+				"character1": "Vampiro feliz",
+				"character2": "Miriam Triste",
+				"shader1": true
+			},
+			{
+				"text": "Avergonzado, intento disculparme pero no logro formar las palabras. Abandono esa idea y comienzo a comer la galleta. El silencio es terriblemente incómodo",
+				"character1": "Vampiro Triste",
+				"character2": "Miriam Triste"
+			},
+			{
+				"tag": "Comprar dos tés helados para mí",
+				"text": "Cuando regreso a la mesa de Miriam, coloco ambos tes frente a ella. Miriam voltea con una sonrisa. “Ah, muchas gracias.” Su mano se estira para tomar uno de los tés pero le pego antes de que sus dedos puedan tocarlo",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Feliz",
+				"shader1": true
+			},
+			{
+				"text": "“¿Perdona princesa, pero ambos son míos. Soy un hombre…sediento, sabes?” Al hablar, lamo mis labios, observando su cuello detenidamente. Miriam baja su mano, avergonzada. “Oh…perdona.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Triste",
+				"shader2": true
+			},
+			{
+				"text": "Por primera vez en todo el día, Miriam nos da un nuevo tema de conversación. “Entonces, Alan, cuéntame sobre ti. ¿A qué te dedicas?” Rio con incomodidad, es una pregunta complicada",
+				"character1": "Vampiro Neutro",
+				"character2": "Miriam Feliz",
+				"shader1": true,
+				"option1": "Mi trabajo no importa, sino mis pasiones",
+				"option2": "Perdí mi trabajo hace poco",
+				"option3": "No estoy hecho para trabajar"
+			},
+			{
+				"tag": "Mi trabajo no importa, sino mis pasiones",
+				"text": "“Mi trabajo no importa, sino mis pasiones. La rutina y la monotonía…no las soporto.” Miriam parece intrigada. Hace un movimiento con la mano, pidiendo que continúe. “Lo que verdaderamente amo…es la arquitectura y el diseño de interiores.”",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"text": "Eso sorprende a Miriam. Parpadea un par de veces, pero sonríe. “Debo admitir que me tomaste desapercibida. Pero me gusta eso en las personas.” Sus ojos brillan"
+			}
+			]
 		}
     ]
 }
