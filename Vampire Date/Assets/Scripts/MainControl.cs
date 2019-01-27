@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 using StorySystem;
 using System.Linq;
 
-public class MainControl : MonoBehaviour {
+//Not really just DialogManager
+public class MainControl : MonoBehaviour
+{
   //References to UI
   public Animator ButtonOption1;
   public Animator ButtonOption2;
@@ -37,10 +39,14 @@ public class MainControl : MonoBehaviour {
   private void Awake()
   {
     storyScript = StoryScript.Load();
-    TextTyperNext();
   }
 
-  public void PressOption1()
+    private void Start()
+    {
+        TextTyperNext();
+    }
+
+    public void PressOption1()
   {
     dialogueIndex = FindIndexOfTag(option1Tag);
     TextTyperNext();
@@ -61,6 +67,7 @@ public class MainControl : MonoBehaviour {
   public int FindIndexOfTag(string tag)
   {
     int index = -1;
+
     for (int i = 0; i < storyScript.scenes[SceneIndex].dialogs.Length; i++)
     {
       if (storyScript.scenes[SceneIndex].dialogs[i].tag == tag)
@@ -88,9 +95,10 @@ public class MainControl : MonoBehaviour {
     if (dialogueIndex >= storyScript.scenes[SceneIndex].dialogs.Length 
       || dialogueIndex < -1)
     {
-      //Load next scene when dialogues are over
-      ScreenFader.instance.FadeStart(ScreenFader.FADE_TO_BLACK);
-    }
+            ScreenFader.instance.FadeToBlack();
+            //Load next scene when dialogues are over
+            //ScreenFader.instance.FadeToClear();
+        }
     else
     {
       //check if we must display buttons

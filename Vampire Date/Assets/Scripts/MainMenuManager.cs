@@ -36,7 +36,7 @@ public class MainMenuManager : MonoBehaviour {
     {
         while(ScreenFader.instance == null || ScreenFader.instance.IsFading)
             yield return null;
-        ScreenFader.instance.FadeStart(ScreenFader.FADE_TO_BLACK);
+        ScreenFader.instance.FadeToBlack();
         while (ScreenFader.instance.IsFading)
             yield return null;
         SceneManager.LoadScene(1);
@@ -54,7 +54,7 @@ public class MainMenuManager : MonoBehaviour {
     {
         while (ScreenFader.instance == null || ScreenFader.instance.IsFading)
             yield return null;
-        ScreenFader.instance.FadeStart(ScreenFader.FADE_TO_BLACK);
+        ScreenFader.instance.FadeToBlack();
         while (ScreenFader.instance.IsFading)
             yield return null;
         if (dir == 0)
@@ -71,7 +71,7 @@ public class MainMenuManager : MonoBehaviour {
             audioSource.clip = mainMenuMusic;
             audioSource.Play();
         }
-        ScreenFader.instance.FadeStart(ScreenFader.FADE_TO_CLEAR);
+        ScreenFader.instance.FadeToClear();
     }
 
     public void ExitButton()
