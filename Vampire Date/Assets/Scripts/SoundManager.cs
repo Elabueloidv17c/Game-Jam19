@@ -26,14 +26,6 @@ public class SoundManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        m_instance.m_intro.GetComponent<AudioSource>();
-        m_instance.m_town.GetComponent<AudioSource>();
-        m_instance.m_cafe.GetComponent<AudioSource>();
-        m_instance.m_club.GetComponent<AudioSource>();
-        m_instance.m_woods.GetComponent<AudioSource>();
-        //m_instance.m_elizabethHouse.GetComponent<AudioSource>();
-        //m_instance.m_miriamHouse.GetComponent<AudioSource>();
     }
 }
 
