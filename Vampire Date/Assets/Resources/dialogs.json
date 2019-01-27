@@ -81,7 +81,36 @@
 					"character1": "Vampiro Neutro",
 					"character2": "Miriam Enojada",
 					"shader2": true,
-                    "text": "A pesar de que he logrado sentarme en la mesa de Miriam, no soy el centro de su atención.  En este momento tengo un archienemigo – ese libro. Si quiero que mis planes funcionen debo alejar la atención de Miriam del odioso artículo. La moralidad, la sensatez y la vergüenza no han sido obstáculos para mí así que no hay manera de que seré derrotado por un bloque de papel."
+                    "text": "A pesar de que he logrado sentarme en la mesa de Miriam, no soy el centro de su atención.  En este momento tengo un archienemigo – ese libro. Si quiero que mis planes funcionen debo alejar la atención de Miriam del odioso artículo. La moralidad, la sensatez y la vergüenza no han sido obstáculos para mí así que no hay manera de que seré derrotado por un bloque de papel.",
+					"dialogOption": 2,
+					"option1":
+					{
+						"text":"¿Qué estás leyendo esta vez?",
+						"next": "¿Qué estás leyendo esta vez?"
+					},
+					"option2":
+					{
+						"text":"Otra vez leyendo, ¿eh?",
+						"next": "Otra vez leyendo, ¿eh?"
+					},
+					"option3":
+					{
+						"text":"Deja eso.",
+						"next": "Deja eso."
+					}
+                },
+				{
+					"tag":"¿Qué estás leyendo esta vez?",
+					"character1": "Vamp Feli",
+					"character2": "Miriam Neutra",
+					"shader2": true,
+                    "text": "“¿Qué estás leyendo esta vez?” El libro de hoy es diferente al del día anterior. Mi corazón baila con la idea de un enorme librero adornando la sala de Miriam. Una mujer tan bella y tan culta inevitablemente ha de tener una morada bien decorada, con organización intachable. Por un momento, me pierdo en mis sueños de salas y comedores."
+                },
+				{
+					"character1": "Vamp Feliz",
+					"character2": "Miriam Neutra",
+					"shader2": true,
+                    "text": "“Es Voga. Salió apenas hace dos días” La cara de Miriam se ilumina al hablar. “Es de mi autor favorito, Mariano Maldonado.” Parece ser que somos dos soñadores – ella de libros y yo de decoración de interiores."
                 }
             ]
 		}
