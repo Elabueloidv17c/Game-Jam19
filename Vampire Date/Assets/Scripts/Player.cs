@@ -97,12 +97,12 @@ public class Player : MonoBehaviour
 
         if(other.gameObject.tag == "left")
         {
-            GameManager.instance.WarptoLoadScene(3);
+            GameManager.instance.WarptoLoadScene(2);
         }
 
         if (other.gameObject.tag == "right")
         {
-            GameManager.instance.WarptoLoadScene(4);
+            GameManager.instance.WarptoLoadScene(3);
         }
     }
 

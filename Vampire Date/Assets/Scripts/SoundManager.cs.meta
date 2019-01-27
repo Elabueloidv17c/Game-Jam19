@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 19ab1ce313257b54881f5fbbc34446b5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_intro: {fileID: 8300000, guid: 3e84dae0f2c3c514ebbed777d58d4ac7, type: 3}
+  - m_town: {fileID: 8300000, guid: 2efde431ffb6428498fd2ac625c7fe5d, type: 3}
+  - m_cafe: {fileID: 8300000, guid: d1faa35694d7137448f4046c3030a50d, type: 3}
+  - m_club: {fileID: 8300000, guid: 0edfa2d021926be40b580ab101b95a2f, type: 3}
+  - m_woods: {fileID: 8300000, guid: 5ba50082260b21349af2e15e67359519, type: 3}
+  - m_elizabethHouse: {instanceID: 0}
+  - m_miriamHouse: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

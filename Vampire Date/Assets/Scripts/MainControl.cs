@@ -39,8 +39,22 @@ public class MainControl : MonoBehaviour
   {
     storyScript = StoryScript.Load();
 
-        //Crear arreglo de string
-        m_changeScene;
+    m_changeScene = new string[] { "regresar al pueblo", "ir a la disco" };
+  }
+
+  public int SceneToLoad(string tag)
+  {
+    if("regresar al pueblo" == tag)
+    {
+        return 1;
+    }
+    
+    if ("ir a la disco" == tag)
+    {
+        return 3;
+    }
+
+    return -1;
   }
 
   public void PressOption1()
@@ -65,6 +79,11 @@ public class MainControl : MonoBehaviour
   {
     int index = -1;
 
+    if(tag == "\n")
+    {
+        return storyScript.scenes[sceneIndex].dialogs.Length;
+    }
+
     for (int i = 0; i < storyScript.scenes[sceneIndex].dialogs.Length; i++)
     {
       if (storyScript.scenes[sceneIndex].dialogs[i].tag == tag)
@@ -74,9 +93,14 @@ public class MainControl : MonoBehaviour
       }
     }
 
-    //Si no encuentra indice, implica que hay que cambiar de escena
+    if (SceneToLoad(tag) != -1)
+    {
+      GameManager.instance.WarptoLoadScene(SceneToLoad(tag));
+      return 0;
+      //Necesito in indice valido para el inicio de la siguiente escena
+    }
 
-    if(index == -1)
+    if (index == -1)
     {
       Debug.LogError("Dialog with tag: '" + tag + "' not found.");
     }
@@ -199,11 +223,14 @@ public class MainControl : MonoBehaviour
       ButtonOption3.GetComponentInChildren<Text>().text = dg.option3.text;
     }
 
-    MainTT.NextEnabled = true;
-    MainTT.textOption = dg.dialogOption;
+    if(!string.IsNullOrEmpty(dg.text))
+    {
+        MainTT.NextEnabled = true;
+        MainTT.textOption = dg.dialogOption;
 
-    string textProta = dg.text.Replace("<prota>", protagonistName);
-    MainTT.ShowText(textProta);
+        string textProta = dg.text.Replace("<prota>", protagonistName);
+        MainTT.ShowText(textProta);
+    }
   }
     
   IEnumerator SetEnableButtons(bool value)
