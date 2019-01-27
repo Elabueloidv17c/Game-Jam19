@@ -1,118 +1,593 @@
 {
     "scenes": [
         {
-            "dialogs": [
-                {
-                    "character1": "Vampiro Feliz",
-                    "text": "Para mi fortuna, el día de hoy el café no está rebosando de gente. El olor del café revuelve mi estómago pero la promesa de comodidad me impulsa. Camino hacia las mesas del fondo pero cambio de dirección cuando veo a Miriam leyendo de nuevo. Me acerco a ella.",
-					
-					"_comment":"NOTA: dialogOption en 2 habilita los botones para las opciones del jugador",
+			"dialogs": [
+        {
+          "text": "La vida de un vampiro nunca es fácil.",
+          "character2": "intro-1"
+        },
+				{
+					"text": "Después de años de vivir en paz a las afueras de un pueblo, mi naturaleza fue descubierta por uno de los aldeanos. ",
+					"character2": "intro-1"
+				},
+        {
+          "text": "El día siguiente, la multitud prendió fuego a mi hogar. Hasta el día de hoy me pregunto por qué. ",
+          "character2": "intro-3"
+        },
+        {
+          "text": "Por un siglo les proporcione control de población sin costo alguno  ¿y así me lo pagan? No debería sorprenderme, la humanidad siempre ha sido malagradecida, pero me considero un optimista.",
+          "character2": "intro-3"
+        },
+        {
+          "text": "Ahora, después de largos días y noches en vuelo he llegado a una pequeña ciudad en búsqueda de una sola cosa: Un nuevo hogar.",
+          "character2": "intro-2"
+        }
+			]
+		},
+		{
+			"dialogs": [
+				{
+					"text": "Mi nombre ha sido <prota> desde que era un humano. En aquel entonces era débil, torpe, un verdadero perdedor. Años y años después he mejorado en cada aspecto, excepto uno."
+				},
+				{
+					"text": "Ni como hombre ni como murciélago puedo entrar a donde no me invitan. Ni siquiera las ardillas me reciben en sus madrigueras.\r\n"
+				},
+				{
+					"text": "No nací para la vida salvaje. Soy un hombre fino, elegante, con mucha clase…Y MEREZCO UN HOGAR QUE SE ME ASEMEJE. Es por ello que he pasado mis días y noches acechando a los humanos, buscando a uno que caiga en mi trampa y me lleve a su hogar. Hasta el momento, no he tenido éxito."
+				},
+				{
+					"text": "Sin embargo, puedo sentir que mi suerte está cambiando. Algo me dice que mis noches de dormir en el frío están a punto de terminar. En esta ciudad está alguien esperándome, y con ellos,  una cómoda cama."
+				}
+			]
+		},
+		{
+			"dialogs": [
+				{
+					"texto": "El pueblo en el que solía vivir era un lugar hermoso, sacado directamente de un cuento de hadas. Las flores abundaban, los pájaros cantaban y los jóvenes reían, sus mejillas rojas con deliciosa sangre.",
+					"character1": "Vampiro Feliz"
+				},
+				{
+					"texto": "Esta ciudad no es así… pero podría superar a la anterior si sus ciudadanos tienen menor inclinación a la piromanía. Especialmente cuando alguien ofrece sus valiosos servicios.",
+					"character1": "Vampiro Neutral"
+				},
+				{
+					"character1": "Cupón",
+					"texto": "Parece una hoja de cupones del café local. Una bebida asquerosa con un increíble poder sobre la humanidad. Es posible que un poco de sangre mejore el sabor."
+				},
+				{
+					"character1": "Cartel",
+					"texto": "Mañana será noche de chicas en la Discoteca local. Estrategia económica para ellos, comida por tiempos para mí"
+				},
+				{
+					"character1": "Señal de café",
+					"texto": "El Café Local está en esa dirección."
+				},
+				{
+					"character1": "Señal disco",
+					"texto": "La Discoteca está por allá."
+				}
+			]
+		},
+		{
+			"dialogs": [
+				{
+					"text": "Como parte de la legión de los inhumanos, no necesito alimento o bebida. La sangre es mi único sustento. Dicho eso, los cafés suelen ser el lugar perfecto para encontrar a una inocente humana dispuesta a ayudar a un vampiro (aunque ella no lo sepa).Como parte de la legión de los inhumanos, no necesito alimento o bebida. La sangre es mi único sustento. Dicho eso, los cafés suelen ser el lugar perfecto para encontrar a una inocente humana dispuesta a ayudar a un vampiro (aunque ella no lo sepa)."
+				},
+				{
+					"text": "Camino hacia una de las mesas más atrás, lejos de las ventanas. Es ahí donde la veo – una mujer hermosa, su piel pálida, como el piso bien pulido de una cocina."
+				},
+				{
+					"text": "Parece concentrada en el libro que está leyendo pero luego levanta la mirada y sus ojos se encuentran con los míos. Camino hacia ella.",
 					"dialogOption": 2,
 					"option1":
 					{
-						"text":"Nos encontramos de nuevo.",
-						"next": "Nos encontramos de nuevo."
+						"text":"Disculpa, no pude evitar notar el libro que estás leyendo",
+						"next": "Disculpa, no pude evitar notar el libro que estás leyendo"
 					},
 					"option2":
 					{
-						"text":"Buenas tardes Miriam.",
-						"next": "Buenas tardes Miriam."
+						"text":"¿Qué hace una chica como tú bebiendo porquería como esta?",
+						"next": "¿Qué hace una chica como tú bebiendo porquería como esta?"
 					},
 					"option3":
 					{
-						"text":"¿Soy yo o solías verte mejor?",
-						"next": "¿Soy yo o solías verte mejor?"
+						"text": "…",
+						"next": "…"
 					}
-                },
-                {
-					"tag": "Nos encontramos de nuevo.",
-					"character2": "Miriam Neutro",
-					"shader2": true,
-                    "text": "“Nos encontramos de nuevo.” Apoyo mi peso en la silla frente a mí. Miriam levanta la mirada y sonríe con curiosidad."
-                },
-                {
+				},
+        {
+          "tag": "Disculpa, no pude evitar notar el libro que estás leyendo",
+          "text": "Disculpa no pude evitar notar el libro que estás leyendo. ¿Es Moncayo?",
+          "character1": "Vampiro Neutro",
+          "character2": "Miriam Neutro",
+          "shader2": true,
+          "NOTAS": "Suma 1 `punto"
+        },
+				{
+					"text": "¿Lo conoces?",
+					"character1": "Vampiro Neutro",
 					"character2": "Miriam Feliz",
-					"shader1": true,
-                    "text": "“¿Has vuelto, <prota>? Pensé que no eras fanático del café.” Mi sonrisa se vuelve más grande."
-                },
+					"shader1": true
+				},
 				{
+					"text": "Rio por dentro. \"Si, lo conozco bastante bien.” Nunca mejor que cuando tuve su cuello entre mis dientes",
+					"character1": "Vampiro Feliz",
+					"character2": "Miriam Neutro",
+					"shader2": true
+				},
+				{
+					"text": "Es mi autor favorito.",
+					"character1": "Vampiro Neutro",
+					"character2": "Miriam Neutro",
+					"shader2": true
+				},
+        {
+          "text": "Entonces, tienes buen gusto.” Me siento a su lado.",
+          "character1": "Vampiro Neutro",
+          "character2": "Miriam Feliz",
+          "shader1": true,
+          "next": "Antes de proseguir"
+        },
+				{
+					"tag": "¿Qué hace una chica como tú bebiendo porquería como esta?",
+					"text": "“¿Qué hace una chica como tú bebiendo porquería como esta?” Me acerco con seguridad.",
+					"character1": "Vampiro Neutro",
+					"character2": "Miriam Neutro",
+					"shader2": true
+				},
+				{
+					"text": "La chica voltea los ojos y levanta su libro.",
+					"character1": "Vampiro Neutro",
+					"character2": "Miriam Enojada",
+					"shader1": true
+				},
+        {
+          "text": "Me siento a su lado con prisa. “Disculpa, empecemos de nuevo.” Extiendo mi mano pero ella la ignora.",
+          "character1": "Vampiro Triste",
+          "character2": "Miriam Enojada",
+          "shader2": true,
+          "next": "Antes de proseguir"
+        },
+				{
+					"tag": "…",
+					"text": "“…” La observo fijamente. Es una mujer delgada pero con curvas, similar a una alta escalera de caracol. Su cabello cae sobre su ojo en ondas brillantes y delicadas, como caen cortinas protegiéndome del sol durante el día.  Su iris es claro, como el cristal de las ventanas. Y su vestido…su seda me hace pensar en sabanas caras, en las que espero dormir después de que la mate.",
+					"character1": "Vampiro Neutro",
+					"character2": "Miriam Triste",
 					"shader2": true,
-                    "text": "“No, del café no. Pero hay otras cosas aquí que me interesan.” En particular, tú casa. Miriam arquea las cejas pero ríe y estira su mano, ofreciendo el asiento.",
-					"next": "A pesar de que he logrado sentarme"
-                },
+					"NOTAS": "Resta un Punto"
+				},
 				{
-					"tag": "Buenas tardes Miriam.",
+					"text": "Los ojos de Miriam observan cada rincón del café. Se encoje y aprieta su libro. ",
+					"character1": "Vampiro Feliz",
+					"character2": "Miriam Triste",
+					"shader1": true
+				},
+				{
+					"text": "“..¿Se te ofrece algo?”",
+					"character1": "Vampiro Feliz",
+					"character2": "Miriam Triste",
+					"shader1": true
+				},
+				{
+					"text": "Me siento a su lado.",
+					"character1": "Vampiro Neutro",
+					"character2": "Miriam Triste",
+					"shader2": true
+				},
+        {
+          "text": "“Soy Vampiro.” sonrío pacientemente, tratando de parecer inofensivo. Después de unos momentos la chica responde. “Miriam.” Miriam toma un trago de su café mientras trato de disimular mi disgusto.",
+          "character1": "Vampiro Enojado",
+          "character2": "Miriam Triste",
+          "shader2": true,
+          "next": "Antes de proseguir"
+        },
+				{
+					"tag": "Cupon",
+					"text": "“Sabes, no soy gran fan del café…pero parece que tú sí.” Tomo el cupón de mi bolsillo y lo extiendo hacia ella. Miriam duda por un momento, pero lo toma con una pequeña sonrisa. Le sonrió de vuelta.",
+					"character1": "Vampiro Neutro",
 					"character2": "Miriam Neutro",
 					"shader2": true,
-                    "text": "“Buenas tardes, Miriam.” Miriam no responde, sus ojos fijados en la página de su libro. “¿Miriam?” Por fin, voltea."
-                },
+					"NOTAS": "Opcion disponible si colectaste el cupon"
+				},
+        {
+          "tag": "Antes de proseguir",
+          "text": "Antes de proseguir, necesito asegurar que Miriam cumple con mis requisitos.",
+          "character1": "Vampiro Feliz",
+          "character2": "Miriam Neutro",
+          "shader2": true,
+          "dialogOption": 2,
+          "option1": {
+            "text": "¿No te estoy reteniendo mucho?",
+            "next": "¿No te estoy reteniendo mucho?"
+          },
+          "option2": {
+            "text": "Oye, ¿vives sola?",
+            "next": "Oye, ¿vives sola?"
+          },
+          "option3": {
+            "text": "¿Puedo ir a tu casa?",
+            "next": "¿Puedo ir a tu casa?"
+          }
+        },
 				{
+					"tag": "¿No te estoy reteniendo mucho?",
+					"text": "“¿Perdona Miriam, pero no te estoy reteniendo mucho? Odiaría que quien te espera en casa se preocupe.” Si todavía pudieran, mis manos estarían sudando en mi regazo.",
+					"character1": "Vampiro Neutro",
+					"character2": "Miriam Feliz",
 					"shader2": true,
-                    "text": "“Oh, disculpa. No me di cuenta de que estabas aquí.” Después de unos tensos segundos, rompo el silencio. “¿Puedo sentarme?” Miriam simplemente se encoje de hombros y regresa a su lectura."
-                },
+					"NOTAS": "Suma 1 `punto"
+				},
 				{
-					"character1": "Vampiro Enojado",
-					"shader2": true,
-                    "text": "La irritación vuelve mi sonrisa dura pero no hay nada de qué preocuparse. Es obvio que no me está prestando la más mínima atención."
-                },
+					"text": "Miriam sonríe y se reclina en su asiento. “No te molestes, somos solo yo y mis dos bebes.”",
+					"character1": "Vampiro Neutro",
+					"character2": "Miriam Feliz",
+					"shader1": true
+				},
+        {
+          "text": "Mis ojos se abren como platos. Miriam ríe. “Mis gatos.”",
+          "character1": "Vampiro Triste",
+          "character2": "Miriam Feliz",
+          "next": "Nos quedamos sentados en silencio"
+        },
 				{
-					"character1": "Vampiro Enojado",
-					"shader2": true,
-                    "text": "La irritación vuelve mi sonrisa dura pero no hay nada de qué preocuparse. Es obvio que no me está prestando la más mínima atención.",
-					"next": "A pesar de que he logrado sentarme"
-                },
-				{
-					"tag": "¿Soy yo o solías verte mejor?",
-					"character2": "Miriam Neutro",
-					"shader2": true,
-                    "text": "“¿Soy yo o solías verte mejor?” Miriam deja su libro y voltea a verme con obvia indignación. Aprovechando su sorpresa, tomo el asiento frente a ella. "
-                },
-				{
-					"character2": "Miriam Enojada",
-                    "text": "“¿Disculpa? ¿Cómo te atreves?” Simplemente sonrío. “Disculpa princesa, pero esta mesa no te pertenece.” Es obvio que Miriam busca cambiar de asiento pero la mejor luz se encuentra en este."
-                },
-				{
-					"character2": "Miriam Enojada",
-					"shader2": true,
-                    "text": "Después de un momento, se resigna y continúa leyendo con frustración. A pesar de que mi actitud está siendo contraproducente, no puedo evitarlo. La maldad es parte de mi naturaleza."
-                },
-				{
-					"tag": "A pesar de que he logrado sentarme",
+					"tag": "Oye, ¿vives sola?",
+					"text": "“Oye, ¿vives sola?” El instante en que las palabras salen de mi boca sé que he cometido un error. Miriam se tensa y su expresión endurece. Aleja su silla sutilmente.",
 					"character1": "Vampiro Neutro",
 					"character2": "Miriam Enojada",
 					"shader2": true,
-                    "text": "A pesar de que he logrado sentarme en la mesa de Miriam, no soy el centro de su atención.  En este momento tengo un archienemigo – ese libro. Si quiero que mis planes funcionen debo alejar la atención de Miriam del odioso artículo. La moralidad, la sensatez y la vergüenza no han sido obstáculos para mí así que no hay manera de que seré derrotado por un bloque de papel.",
+					"NOTAS": "resta 1 punto"
+				},
+				{
+					"text": " “¿Por qué preguntas?”",
+					"character1": "Vampiro Neutro",
+					"character2": "Miriam Enojada",
+					"shader1": true
+				},
+        {
+          "text": "Rio nerviosamente, tratando de ignorar la tensa atmósfera.",
+          "character1": "Vampiro Neutro",
+          "character2": "Miriam Enojada",
+          "shader2": true,
+          "next": "Nos quedamos sentados en silencio"
+        },
+				{
+					"tag": "¿Puedo ir a tu casa?",
+					"text": "“¿Puedo ir a tu casa?”",
+					"character1": "Vampiro Feliz",
+					"character2": "Miriam Neutro",
+					"shader2": true,
+					"NOTAS": "resta 1 punto"
+				},
+				{
+					"text": "Miriam me penetra con la mirada. “No.”",
+					"character1": "Vampiro Neutro",
+					"character2": "Miriam Enojada",
+					"shader1": true
+				},
+        {
+          "tag": "Nos quedamos sentados en silencio",
+          "text": "Nos quedamos sentados en silencio los próximos diez minutos.\r\nVolteo a ver una de las ventanas del otro lado del café. Está oscureciendo y aunque Miriam parece prometedora, no es el momento para actuar todavía. Caminamos juntos hacia la puerta y al salir volteo hacia ella.\r\n",
+          "character1": "Vampiro Triste",
+          "character2": "Miriam Enojada",
+          "shader1": true,
+          "shader2": true,
+          "dialogOption": 2,
+          "option1": {
+            "text": "Fue un gusto conocerte.",
+            "next": "Fue un gusto conocerte."
+          },
+          "option2": {
+            "text": "Adiós.",
+            "next": "Adiós."
+          },
+          "option3": {
+            "text": "¿Segura que no puedo ir a tu casa?",
+            "next": "¿Segura que no puedo ir a tu casa?"
+          }
+        },
+				{
+					"tag": "Fue un gusto conocerte.",
+					"text": "“Fue un gusto conocerte, Miriam. Espero verte por aquí alguna otra vez.” Sostengo su mirada, sonriéndole.",
+					"character1": "Vampiro Feliz",
+					"character2": "Miriam Neutro",
+					"shader2": true
+				},
+				{
+					"text": " Miriam me devuelve la sonrisa. “Estoy segura que así será.” Se da la vuelta, la tela de su vestido volando a su alrededor.",
+					"character1": "Vampiro Feliz",
+					"character2": "Miriam Feliz",
+					"shader1": true
+				},
+        {
+          "text": "En un instante, se ha ido.",
+          "character1": "Vampiro Feliz",
+          "next": "disco-pueblo"
+        },
+        {
+          "tag": "Adiós.",
+          "text": "“Adiós.” Me despido de ella cordialmente y ambos nos despedimos con un movimiento de la mano, caminando en direcciones opuestas.",
+          "character1": "Vampiro Neutro",
+          "character2": "Miriam Neutro",
+          "shader1": true,
+          "next": "disco-pueblo"
+        },
+				{
+					"tag": "¿Segura que no puedo ir a tu casa?",
+					"text": "“¿Segura que no puedo ir a tu casa?” Algo dentro de mí sabe que esto no funcionara, pero estoy desesperado. Pensar en la cama fría y húmeda de tierra forestal que me espera me ha llevado al borde del abismo.",
+					"character1": "Vampiro Triste",
+					"character2": "Miriam Enojada",
+					"shader2": true
+				},
+        {
+          "text": "“No.” Miriam se da la vuelta y se va.",
+          "character1": "Vampiro Triste",
+          "character2": "Miriam Enojada",
+          "shader1": true,
+          "next": "disco-pueblo"
+        },
+        {
+          "tag": "disco-pueblo",
+          "dialogOption": 2,
+          "option1": {
+            "text": "ir a la disco",
+            "next": "ir a la disco"
+          },
+          "option2": {
+            "text": "regresar al pueblo",
+            "next": "regresar al pueblo"
+          }
+        }
+			]
+		},
+		{
+			"dialogs": [
+				{
+					"text": "El cambio de un humano a un vampiro se lleva muchas cosas consigo. El hambre, la vejez y la moralidad son pocas de miles de cosas que se vuelven parte del pasado. Para mi fortuna, el gusto por bailar no es una de ellas.",
+					"character1": "Vampiro Neutro"
+				},
+				{
+					"text": "Las discotecas son frecuentadas por muchos como yo. La oscuridad, la música, la multitud de humanos vulnerables…es lo más cercano que hay a los banquetes de mi juventud. Esta noche, la caza se ve prometedora.",
+					"character1": "Vampiro Neutro"
+				},
+				{
+					"text": "En el centro de la pista, una chica opaca a las demás con la energía de alguien que despierta en una cálida cama todos los días. Con una sonrisa, camino hacia ella.",
+					"character1": "Vampiro Feliz",
+					"character2": "Elizabeth feliz",
 					"dialogOption": 2,
 					"option1":
 					{
-						"text":"¿Qué estás leyendo esta vez?",
-						"next": "¿Qué estás leyendo esta vez?"
+						"text":"Yo te enseño",
+						"next": "Yo te enseño"
 					},
 					"option2":
 					{
-						"text":"Otra vez leyendo, ¿eh?",
-						"next": "Otra vez leyendo, ¿eh?"
+						"text":"¿Quieres bailar?",
+						"next": "¿Quieres bailar?"
 					},
 					"option3":
 					{
-						"text":"Deja eso.",
-						"next": "Deja eso."
+						"text":"Qué buen movimiento de cadera. *wink*",
+						"next": "Qué buen movimiento de cadera. *wink*"
 					}
-                },
+				},
+        {
+          "tag": "Yo te enseño",
+          "text": "Me acerco a la chica y la toco en el hombro delicadamente. “Yo te enseño.” La chica voltea y se ve confundida pero suelta una carcajada cuando ve mis movimientos tiesos y exagerados. Tiene lindos dientes, brillantes, como las luces en un gran candelabro de cristal.",
+          "character1": "Vampiro Feliz",
+          "character2": "Elizabeth Neutro",
+          "shader2": true,
+          "next": "Convergencia"
+        },
 				{
-					"tag":"¿Qué estás leyendo esta vez?",
-					"character1": "Vampiro Feliz",
-					"character2": "Miriam Neutro",
-					"shader2": true,
-                    "text": "“¿Qué estás leyendo esta vez?” El libro de hoy es diferente al del día anterior. Mi corazón baila con la idea de un enorme librero adornando la sala de Miriam. Una mujer tan bella y tan culta inevitablemente ha de tener una morada bien decorada, con organización intachable. Por un momento, me pierdo en mis sueños de salas y comedores."
-                },
+					"tag": "¿Quieres bailar?",
+					"text": "“¿Quieres bailar?” La chica para sus movimientos para girar en mi dirección. Se encoje de hombros.",
+					"character1": "Vampiro Neutro",
+					"character2": "Elizabeth Neutro",
+					"shader1": true
+				},
+        {
+          "text": "Me rasco la cabeza con confusión. “No tienes por qué asustarte, es solo bailar.” La chica asiente pero no se ve convencida.",
+          "character1": "Vampiro Triste",
+          "character2": "Elizabeth Neutro",
+          "shader2": true,
+          "next": "Convergencia"
+        },
 				{
+					"tag": "Qué buen movimiento de cadera",
+					"text": "“Que buen movimiento de cadera.” Susurro en el oído de la chica.",
 					"character1": "Vampiro Feliz",
-					"character2": "Miriam Neutro",
+					"character2": "Elizabeth Neutro",
+					"shader2": true
+				},
+        {
+          "text": "Ella voltea alarmada, expresión de pánico en su cara, sus mejillas pálidas como el granito. Se aleja de mí con velocidad pero la multitud bloquea su escape.",
+          "character1": "Vampiro Feliz",
+          "character2": "Elizabeth enojada",
+          "shader1": true,
+          "next": "Convergencia"
+        },
+				{
+					"tag": "Convergencia",
+					"text": "“¿Cómo te llamas? Mi nombre es <prota>,” le sonrió a la chica.",
+					"character1": "Vampiro Feliz",
+					"character2": "Elizabeth Neutro",
+					"shader2": true
+				},
+				{
+					"text": "A pesar de sus movimientos seguros y atrevidos en la pista parece ser muy tímida cara a cara. Los labios de la chica se mueven, pero el ruido de la disco no me permite escuchar.",
+					"character1": "Vampiro Feliz",
+					"character2": "Elizabeth Neutro",
+					"shader1": true
+				},
+				{
+					"text": "“¿Cómo?” La chica se ve avergonzada.",
+					"character1": "Vampiro Triste",
+					"character2": "Elizabeth Enojada",
+					"shader2": true
+				},
+				{
+					"text": "“ELIZABETH!”",
+					"character1": "Vampiro Triste",
+					"character2": "Elizabeth Enojada",
+					"shader1": true
+				},
+				{
+					"text": "Parpadeo un par de veces, antes de sonreír, complacido. “Que hermoso nombre, Elizabeth.”",
+					"character1": "Vampiro Feliz",
+					"character2": "Elizabeth Enojada",
+					"shader2": true
+				},
+				{
+					"text": "Bailamos juntos por un largo tiempo, disfrutando juntos canción tras canción. Sin embargo, la diversión inevitablemente termina y debo recordar mi plan original.",
+					"character1": "Vampiro Feliz",
+					"character2": "Elizabeth Neutro",
+					"dialogOption": 2,
+					"option1":
+					{
+						"text":"¿Vendrá alguien por ti?",
+						"next": "¿Vendrá alguien por ti?"
+					},
+					"option2":
+					{
+						"text":"¿Bailas muy a menudo?",
+						"next": "¿Bailas muy a menudo?"
+					},
+					"option3":
+					{
+						"text":"¿Y si continuamos este baile en privado?",
+						"next": "¿Y si continuamos este baile en privado?"
+					}
+				},
+				{
+					"tag": "¿Vendrá alguien por ti?",
+					"text": "“Elizabeth, ¿vendrá alguien por ti? Se ha hecho muy tarde y es peligroso andar por ahí tu sola.” En el peor de los casos, podrías toparte con alguien como yo. Poso mi mano sobre su brazo, dándole un suave apretón.",
+					"character1": "Vampiro Feliz",
+					"character2": "Elizabeth Neutro",
+					"shader2": true
+				},
+				{
+					"text": "Elizabeth esta relajada y sonríe en mi dirección. “No te preocupes, vivo muy cerca de aquí. Camino por ahí casi todos los días.”",
+					"character1": "Vampiro Feliz",
+					"character2": "Elizabeth feliz",
+					"shader1": true
+				},
+				{
+					"text": "No dejo ir de su hombro. “¿Y a tus padres no les preocupa?”",
+					"character1": "Vampiro Neutro",
+					"character2": "Elizabeth feliz",
+					"shader2": true
+				},
+				{
+					"text": "Elizabeth baja la mirada. “No. Solo soy yo.”",
+					"character1": "Vampiro Neutro",
+					"character2": "Elizabeth Neutro",
+					"shader1": true
+				},
+				{
+					"text": "Es difícil contener mi sonrisa ante sus palabras.",
+					"character1": "Vampiro Feliz",
+					"character2": "Elizabeth Neutro",
 					"shader2": true,
-                    "text": "“Es Voga. Salió apenas hace dos días” La cara de Miriam se ilumina al hablar. “Es de mi autor favorito, Mariano Maldonado.” Parece ser que somos dos soñadores – ella de libros y yo de decoración de interiores."
-                }
-            ]
+					"dialogOption": 2,
+					"option1":
+					{
+						"text":"¿Bailas muy a menudo?",
+						"next": "¿Bailas muy a menudo?"
+					},
+					"option2":
+					{
+						"text":"¿Y si continuamos este baile en privado?",
+						"next": "¿Y si continuamos este baile en privado?"
+					},
+					"option3":
+					{
+						"text":"¿Me enseñarás tus movimientos otro día?",
+						"next": "¿Me enseñarás tus movimientos otro día?"
+					}
+				},
+				{
+					"tag": "¿Bailas muy a menudo?",
+					"text": "“¿Bailas muy a menudo? Eres buena y pareces conocer a todos aquí.",
+					"character1": "Vampiro Feliz",
+					"character2": "Elizabeth Neutro",
+					"shader2": true
+				},
+				{
+					"text": "Elizabeth se sonroja. “No…tanto. Solo me gusta bailar.”",
+					"character1": "Vampiro Feliz",
+					"character2": "Elizabeth feliz",
+					"shader1": true
+				},
+        {
+          "text": "No como bailarinas muy a menudo, pero algo me dice que Elizabeth será deleitable. “Es bueno hacer lo que te gusta.”",
+          "character1": "Vampiro Feliz",
+          "character2": "Elizabeth feliz",
+          "dialogOption": 2,
+          "option1": {
+            "text": "¿Me enseñaras tus movimientos otro día?",
+            "next": "¿Me enseñaras tus movimientos otro día?"
+          },
+          "option2": {
+            "text": "Hicimos buena pareja, ¿no?",
+            "next": "Hicimos buena pareja, ¿no?"
+          },
+          "option3": {
+            "text": "Creo que te falta practicar",
+            "next": "Creo que te falta practicar"
+          }
+        },
+        {
+          "tag": "¿Me enseñaras tus movimientos otro día?",
+          "text": "Mientras nos alejamos de la disco, volteo hacia Elizabeth. “¿Me enseñarás tus movimientos otro día?”",
+          "character1": "Vampiro Feliz",
+          "character2": "Elizabeth Neutro",
+          "shader2": true
+        },
+				{
+					"text": "Elizabeth ríe al escuchar mi pregunta, y levanta una mano para cubrir su boca. Evade mi mirada.",
+					"character1": "Vampiro Feliz",
+					"character2": "Elizabeth feliz",
+					"shader1": true
+				},
+				{
+					"text": "“¿Si?”",
+					"character1": "Vampiro Feliz",
+					"character2": "Elizabeth feliz",
+					"shader2": true
+				},
+				{
+					"text": "Elizabeth me observa y vuelve a reír. “Sí.”",
+					"character1": "Vampiro Feliz",
+					"character2": "Elizabeth feliz",
+          "shader1": true,
+          "next" : ""
+				},
+        {
+          "tag": "Hicimos buena pareja, ¿no?",
+          "text": "Tomo la mano de la Elizabeth y le doy una lenta vuelta. “Hicimos buena pareja, ¿no?”\n",
+          "character1": "Vampiro Feliz",
+          "character2": "Elizabeth feliz",
+          "shader2": true
+        },
+        {
+          "text": "Elizabeth no contesta pero se sonroja aún más, acercándose cada vez más a la apariencia de un tomate. No suelto su mano y ella no se aleja de mi hasta que es hora de separarnos.",
+          "character1": "Vampiro Feliz",
+          "character2": "Elizabeth feliz",
+          "next": ""
+        },
+				{
+					"tag": "Creo que te falta practicar",
+					"text": "Hay una distancia firme entre los dos. Sin voltear a verla, le digo, “Creo que te falta practicar.”",
+					"character1": "Vampiro Neutro",
+					"character2": "Elizabeth Neutro",
+					"shader2": true
+				},
+				{
+					"text": "Elizabeth no digna eso con una respuesta. Simplemente se da media vuelta y se va sin otra palabra.",
+					"character1": "Vampiro Neutro",
+					"character2": "Elizabeth triste"
+				}
+			]
 		}
     ]
 }

@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
     {
         m_activeState = SceneLoaderState.IDLE;
         m_lastScene = -1;
-        SetScene(1);
+        SetScene(0);
 
         Screen_Fader.FadeToClear();
     }
@@ -120,24 +120,46 @@ public class GameManager : MonoBehaviour
                 case 0:
 
                     m_bat.gameObject.SetActive(false);
-                    m_bat.transform.position = new Vector3(0, 0, 0);
+                    m_bat.position = new Vector3(0, 0, 0);
                     
-                    m_dialog.gameObject.SetActive(false);
+                    m_dialog.gameObject.SetActive(true);
+                    m_dialog.GetComponent<MainControl>().StartScene(index);
 
-                    m_petyrHouse.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-                    m_directions.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                    m_petyrHouse.GetComponent<SpriteRenderer>().enabled = true;
+                    m_directions.GetComponent<SpriteRenderer>().enabled = false;
 
-                    m_miriamHouse.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-                    m_elizabethHouse.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                    m_miriamHouse.GetComponent<SpriteRenderer>().enabled = false;
+                    m_elizabethHouse.GetComponent<SpriteRenderer>().enabled = false;
 
-                    m_woods.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-                    m_town.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-                    m_cafe.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-                    m_disco.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                    m_woods.GetComponent<SpriteRenderer>().enabled = false;
+                    m_town.GetComponent<SpriteRenderer>().enabled = false;
+                    m_cafe.GetComponent<SpriteRenderer>().enabled = false;
+                    m_disco.GetComponent<SpriteRenderer>().enabled = false;
 
                     break;
 
                 case 1:
+
+                    m_bat.gameObject.SetActive(false);
+                    m_bat.position = new Vector3(0, 0, 0);
+
+                    m_dialog.gameObject.SetActive(true);
+                    m_dialog.GetComponent<MainControl>().StartScene(index);
+
+                    m_petyrHouse.GetComponent<SpriteRenderer>().enabled = true;
+                    m_directions.GetComponent<SpriteRenderer>().enabled = false;
+
+                    m_miriamHouse.GetComponent<SpriteRenderer>().enabled = false;
+                    m_elizabethHouse.GetComponent<SpriteRenderer>().enabled = false;
+
+                    m_woods.GetComponent<SpriteRenderer>().enabled = false;
+                    m_town.GetComponent<SpriteRenderer>().enabled = false;
+                    m_cafe.GetComponent<SpriteRenderer>().enabled = false;
+                    m_disco.GetComponent<SpriteRenderer>().enabled = false;
+
+                    break;
+
+                case 2:
         
                     m_bat.gameObject.SetActive(true);
                     m_bat.transform.position = new Vector3(0, 0, 0);
@@ -159,7 +181,7 @@ public class GameManager : MonoBehaviour
 
                     break;
 
-                case 2:
+                case 3:
 
                     m_bat.gameObject.SetActive(false);
                     m_bat.transform.position = new Vector3(0, 0, 0);
@@ -167,6 +189,7 @@ public class GameManager : MonoBehaviour
                     m_character1.gameObject.SetActive(true);
                     m_character2.gameObject.SetActive(true);
                     m_dialog.gameObject.SetActive(true);
+                    m_dialog.GetComponent<MainControl>().StartScene(index);
 
                     m_cafe.gameObject.GetComponent<SpriteRenderer>().enabled = true;
                     m_directions.gameObject.GetComponent<SpriteRenderer>().enabled = false;
@@ -181,7 +204,7 @@ public class GameManager : MonoBehaviour
 
                     break;
 
-                case 3:
+                case 4:
 
                     m_bat.gameObject.SetActive(false);
                     m_bat.transform.position = new Vector3(0, 0, 0);
@@ -189,6 +212,7 @@ public class GameManager : MonoBehaviour
                     m_character1.gameObject.SetActive(true);
                     m_character2.gameObject.SetActive(true);
                     m_dialog.gameObject.SetActive(true);
+                    m_dialog.GetComponent<MainControl>().StartScene(index);
 
                     m_disco.gameObject.GetComponent<SpriteRenderer>().enabled = true;
                     m_directions.gameObject.GetComponent<SpriteRenderer>().enabled = false;
@@ -203,7 +227,7 @@ public class GameManager : MonoBehaviour
 
                     break;
 
-                case 4:
+                case 5:
 
                     m_bat.gameObject.SetActive(false);
                     m_bat.transform.position = new Vector3(0, 0, 0);
@@ -225,7 +249,7 @@ public class GameManager : MonoBehaviour
 
                     break;
 
-                case 5:
+                case 6:
 
                     m_bat.gameObject.SetActive(false);
                     m_bat.transform.position = new Vector3(0, 0, 0);
@@ -246,7 +270,7 @@ public class GameManager : MonoBehaviour
 
                     break;
 
-                case 6:
+                case 7:
 
                     m_bat.gameObject.SetActive(false);
                     m_bat.transform.position = new Vector3(0, 0, 0);

@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using StorySystem;
 using System.Linq;
+using System;
 
 //Not really just DialogManager
 public class MainControl : MonoBehaviour
@@ -22,11 +23,7 @@ public class MainControl : MonoBehaviour
 
   //current dialogue being displayed
   private int dialogueIndex = 0;
-
-  public int SceneIndex
-  {
-    get; set;
-  }
+  private int sceneIndex = 0;
 
   //in case buttons are pressed jump to the corresponding dialogue
   private string option1Tag;
@@ -41,22 +38,13 @@ public class MainControl : MonoBehaviour
     storyScript = StoryScript.Load();
   }
 
-    private void Start()
-    {
-        Character1Image.sprite = null;
-        Character2Image.sprite = null;
-        Character1Image.color = Color.clear;
-        Character2Image.color = Color.clear;
-        TextTyperNext();
-    }
-
-    public void PressOption1()
-    {
+  public void PressOption1()
+  {
       dialogueIndex = FindIndexOfTag(option1Tag);
       TextTyperNext();
-    }
+  }
 
-  public void PressOption2()
+    public void PressOption2()
   {
     dialogueIndex = FindIndexOfTag(option2Tag);
     TextTyperNext();
@@ -72,9 +60,9 @@ public class MainControl : MonoBehaviour
   {
     int index = -1;
 
-    for (int i = 0; i < storyScript.scenes[SceneIndex].dialogs.Length; i++)
+    for (int i = 0; i < storyScript.scenes[sceneIndex].dialogs.Length; i++)
     {
-      if (storyScript.scenes[SceneIndex].dialogs[i].tag == tag)
+      if (storyScript.scenes[sceneIndex].dialogs[i].tag == tag)
       {
         index = i;
         break;
@@ -96,32 +84,30 @@ public class MainControl : MonoBehaviour
 
   IEnumerator TextTyperNextCoroutine()
   {
-    if (dialogueIndex >= storyScript.scenes[SceneIndex].dialogs.Length 
+    if (dialogueIndex >= storyScript.scenes[sceneIndex].dialogs.Length 
       || dialogueIndex < -1)
     {
-            ScreenFader.instance.FadeToBlack();
-            //Load next scene when dialogues are over
-            //ScreenFader.instance.FadeToClear();
-        }
+        GameManager.instance.WarptoLoadScene(sceneIndex + 1);
+    }
     else
     {
-      SetCharacterImages(storyScript.scenes[SceneIndex].dialogs[dialogueIndex]);
+      SetCharacterImages(storyScript.scenes[sceneIndex].dialogs[dialogueIndex]);
 
       //check if we must display buttons
-      if (storyScript.scenes[SceneIndex].dialogs[dialogueIndex].dialogOption 
+      if (storyScript.scenes[sceneIndex].dialogs[dialogueIndex].dialogOption 
         == DialogTextOption.EndWithOptions)
       {
-        option1Tag = storyScript.scenes[SceneIndex].dialogs[dialogueIndex].option1.next;
-        option2Tag = storyScript.scenes[SceneIndex].dialogs[dialogueIndex].option2.next;
-        option3Tag = storyScript.scenes[SceneIndex].dialogs[dialogueIndex].option3.next;
+        option1Tag = storyScript.scenes[sceneIndex].dialogs[dialogueIndex].option1.next;
+        option2Tag = storyScript.scenes[sceneIndex].dialogs[dialogueIndex].option2.next;
+        option3Tag = storyScript.scenes[sceneIndex].dialogs[dialogueIndex].option3.next;
       }
       else if(buttonsSet)
       {
         yield return StartCoroutine(SetEnableButtons(false));
       }
-      SetDisplay(storyScript.scenes[SceneIndex].dialogs[dialogueIndex]);
+      SetDisplay(storyScript.scenes[sceneIndex].dialogs[dialogueIndex]);
 
-      string nextTag = storyScript.scenes[SceneIndex].dialogs[dialogueIndex].next;
+      string nextTag = storyScript.scenes[sceneIndex].dialogs[dialogueIndex].next;
       if (nextTag == "")
       {
         dialogueIndex++;
@@ -156,7 +142,7 @@ public class MainControl : MonoBehaviour
       }
       if (Character1Image.sprite != null)
       {
-          Character1Image.color = (dg.shader2) ? Color.gray : Color.white;
+          Character1Image.color = (dg.shader1) ? Color.gray : Color.white;
       }
     }
 
@@ -186,7 +172,18 @@ public class MainControl : MonoBehaviour
     }
   }
 
-  void SetDisplay(Dialog dg)
+    internal void StartScene(int index)
+    {
+        dialogueIndex = 0;
+        sceneIndex = index;
+        Character1Image.sprite = null;
+        Character2Image.sprite = null;
+        Character1Image.color = Color.clear;
+        Character2Image.color = Color.clear;
+        TextTyperNext();
+    }
+
+    void SetDisplay(Dialog dg)
   {
     if (dg.dialogOption == DialogTextOption.EndWithOptions)
     {
@@ -194,15 +191,14 @@ public class MainControl : MonoBehaviour
       ButtonOption2.GetComponentInChildren<Text>().text = dg.option2.text;
       ButtonOption3.GetComponentInChildren<Text>().text = dg.option3.text;
     }
+
     MainTT.NextEnabled = true;
     MainTT.textOption = dg.dialogOption;
 
     string textProta = dg.text.Replace("<prota>", protagonistName);
     MainTT.ShowText(textProta);
   }
-
-  
-
+    
   IEnumerator SetEnableButtons(bool value)
   {
     //Save current button state
