@@ -326,7 +326,8 @@
           "next": "disco-pueblo"
         },
         {
-          "tag": "disco-pueblo",
+		  "tag": "disco-pueblo",
+		  "text": "",
           "dialogOption": 2,
           "option1": {
             "text": "ir a la disco",

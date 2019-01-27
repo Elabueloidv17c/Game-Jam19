@@ -21,6 +21,8 @@ public class MainControl : MonoBehaviour
   public string protagonistName = "Petyr";
   private StoryScript storyScript = null;
 
+  string[] m_changeScene;
+
   //current dialogue being displayed
   private int dialogueIndex = 0;
   private int sceneIndex = 0;
@@ -36,6 +38,9 @@ public class MainControl : MonoBehaviour
   private void Awake()
   {
     storyScript = StoryScript.Load();
+
+        //Crear arreglo de string
+        m_changeScene;
   }
 
   public void PressOption1()
@@ -44,7 +49,7 @@ public class MainControl : MonoBehaviour
       TextTyperNext();
   }
 
-    public void PressOption2()
+  public void PressOption2()
   {
     dialogueIndex = FindIndexOfTag(option2Tag);
     TextTyperNext();
@@ -68,6 +73,8 @@ public class MainControl : MonoBehaviour
         break;
       }
     }
+
+    //Si no encuentra indice, implica que hay que cambiar de escena
 
     if(index == -1)
     {
@@ -172,7 +179,7 @@ public class MainControl : MonoBehaviour
     }
   }
 
-    internal void StartScene(int index)
+  internal void StartScene(int index)
     {
         dialogueIndex = 0;
         sceneIndex = index;
@@ -183,7 +190,7 @@ public class MainControl : MonoBehaviour
         TextTyperNext();
     }
 
-    void SetDisplay(Dialog dg)
+  void SetDisplay(Dialog dg)
   {
     if (dg.dialogOption == DialogTextOption.EndWithOptions)
     {
