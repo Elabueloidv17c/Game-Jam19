@@ -54,6 +54,7 @@ public class TextTyper : MonoBehaviour
         StopAllCoroutines();
         textGUI.text = value;
         IsTypingText = true;
+
         StartCoroutine(TypeText());
     }
 
@@ -65,7 +66,7 @@ public class TextTyper : MonoBehaviour
         textGUI.text = "";
         footerStack = new Stack<string>();
 
-        while (ScreenFader.instance == null || ScreenFader.instance.IsFading || ScreenFader.instance.Alpha == 1f)
+        while (ScreenFader.instance == null || ScreenFader.instance.IsFading)
             yield return null;
 
         foreach (var child in parsedText)

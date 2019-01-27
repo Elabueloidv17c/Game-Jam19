@@ -1,67 +1,85 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
+using System.Collections;
 
-public class ScreenFader : MonoBehaviour {
-
+public class ScreenFader : MonoBehaviour
+{
     public static ScreenFader instance;
+    Animator animator;
+    bool isFading = false;
+    bool isClear = true;
 
-    public Texture2D faderTexture;
-    public float fadeSpeed = 0.8f;
-    private int drawDepth = -1000;
-    private bool isFading = true;
-    private int fadeDir = FADE_TO_CLEAR;
-    private float alpha = 1f;
-
-    public const int FADE_TO_BLACK = 1;
-    public const int FADE_TO_CLEAR = -1;
 
     public bool IsFading
     {
-        get{ return isFading; }
+        get
+        {
+            return isFading;
+        }
+
+        private set
+        {
+            isFading = value;
+        }
     }
 
-    public float Alpha
+    public bool IsClear
     {
         get
-        { return alpha; }
+        {
+            return isClear;
+        }
+
+        private set
+        {
+            isClear = value;
+        }
+    }
+
+    public Animator Animator
+    {
+        get
+        {
+            if (null == animator)
+                animator = GetComponent<Animator>();
+            return animator;
+        }
     }
 
     public void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(this);
-            SceneManager.sceneLoaded += sceneLoaded;
         }
-        else
+    }
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        if (IsFading)
         {
-            Destroy(this);
+            var state = Animator.GetCurrentAnimatorStateInfo(0);
+            if (state.IsName("Black") || state.IsName("Clear"))
+            {
+                IsFading = false;
+                if (state.IsName("Clear")) IsClear = true;
+            }
         }
     }
 
-    private void sceneLoaded(Scene arg0, LoadSceneMode arg1)
+    public void FadeToClear()
     {
-        alpha = 1f;
-        isFading = true;
-        fadeDir = FADE_TO_CLEAR;
+        IsFading = true;
+        Animator.SetTrigger("FadeIn");
     }
 
-    public void FadeStart(int fadeDir)
+    public void FadeToBlack()
     {
-        isFading = true;
-        this.fadeDir = fadeDir;
-    }
-
-    private void OnGUI()
-    {
-        alpha += fadeDir * fadeSpeed * Time.deltaTime;
-        alpha = Mathf.Clamp01(alpha);
-        if (Mathf.Clamp01(fadeDir) == alpha) isFading = false;
-        GUI.color = new Color(1f, 1f, 1f, alpha);
-        GUI.depth = drawDepth;
-        GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), faderTexture);
+        IsFading = true;
+        Animator.SetTrigger("FadeOut");
     }
 }

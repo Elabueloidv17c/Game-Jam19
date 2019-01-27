@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public Transform m_sceneManager;
+    public Transform m_sceneLoader;
+
     BoxCollider2D m_collider;
     SpriteRenderer m_sprite;
     Rigidbody2D m_rigidBody;
     Animator m_animator;
 
-    public Item[] m_inventory;
+    public Item[] m_inventory; 
 
     float m_elizabethEmpathy;
     float m_miriamEmpathy;
@@ -94,12 +97,12 @@ public class Player : MonoBehaviour
 
         if(other.gameObject.tag == "left")
         {
-
+            GameManager.instance.WarptoLoadScene(2);
         }
 
         if (other.gameObject.tag == "right")
         {
-
+            GameManager.instance.WarptoLoadScene(3);
         }
     }
 
