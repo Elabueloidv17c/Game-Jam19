@@ -43,14 +43,18 @@ public class MainControl : MonoBehaviour
 
     private void Start()
     {
+        Character1Image.sprite = null;
+        Character2Image.sprite = null;
+        Character1Image.color = Color.clear;
+        Character2Image.color = Color.clear;
         TextTyperNext();
     }
 
     public void PressOption1()
-  {
-    dialogueIndex = FindIndexOfTag(option1Tag);
-    TextTyperNext();
-  }
+    {
+      dialogueIndex = FindIndexOfTag(option1Tag);
+      TextTyperNext();
+    }
 
   public void PressOption2()
   {
@@ -101,6 +105,8 @@ public class MainControl : MonoBehaviour
         }
     else
     {
+      SetCharacterImages(storyScript.scenes[SceneIndex].dialogs[dialogueIndex]);
+
       //check if we must display buttons
       if (storyScript.scenes[SceneIndex].dialogs[dialogueIndex].dialogOption 
         == DialogTextOption.EndWithOptions)
@@ -131,13 +137,14 @@ public class MainControl : MonoBehaviour
   {
     if (dg.character1 == "\n")
     {
+      Character1Image.sprite = null;
       Character1Image.color = Color.clear;
     }
     else
     {
       if (dg.character1 != "")
       {
-        /*Sprite spr = Resources.Load<Sprite>("Characters/" + dg.character1);
+        Sprite spr = Resources.Load<Sprite>("Characters/" + dg.character1);
         if (spr == null)
         {
           Debug.LogError("Expected Image '" + dg.character1 + "' Not Found.");
@@ -145,20 +152,24 @@ public class MainControl : MonoBehaviour
         else
         {
           Character1Image.sprite = spr;
-        }*/
+        }
       }
-      Character1Image.color = (dg.shader1) ? Color.gray : Color.white;
+      if (Character1Image.sprite != null)
+      {
+          Character1Image.color = (dg.shader2) ? Color.gray : Color.white;
+      }
     }
 
     if (dg.character2 == "\n")
     {
+      Character2Image.sprite = null;
       Character2Image.color = Color.clear;
     }
     else
     {
       if (dg.character2 != "")
       {
-        /*Sprite spr = Resources.Load<Sprite>("Characters/" + dg.character2);
+        Sprite spr = Resources.Load<Sprite>("Characters/" + dg.character2);
         if (spr == null)
         {
           Debug.LogError("Expected Image '" + dg.character2 + "' Not Found.");
@@ -166,16 +177,17 @@ public class MainControl : MonoBehaviour
         else
         {
           Character2Image.sprite = spr;
-        }*/
+        }
       }
-      Character2Image.color = (dg.shader2) ? Color.gray : Color.white;
+      if(Character2Image.sprite != null)
+      {
+          Character2Image.color = (dg.shader2) ? Color.gray : Color.white;
+      }
     }
   }
 
   void SetDisplay(Dialog dg)
   {
-    SetCharacterImages(dg);
-
     if (dg.dialogOption == DialogTextOption.EndWithOptions)
     {
       ButtonOption1.GetComponentInChildren<Text>().text = dg.option1.text;

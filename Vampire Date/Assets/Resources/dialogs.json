@@ -26,7 +26,7 @@
                 },
                 {
 					"tag": "Nos encontramos de nuevo.",
-					"character2": "Miriam Neutral",
+					"character2": "Miriam Neutro",
 					"shader2": true,
                     "text": "“Nos encontramos de nuevo.” Apoyo mi peso en la silla frente a mí. Miriam levanta la mirada y sonríe con curiosidad."
                 },
@@ -42,7 +42,7 @@
                 },
 				{
 					"tag": "Buenas tardes Miriam.",
-					"character2": "Miriam Neutral",
+					"character2": "Miriam Neutro",
 					"shader2": true,
                     "text": "“Buenas tardes, Miriam.” Miriam no responde, sus ojos fijados en la página de su libro. “¿Miriam?” Por fin, voltea."
                 },
@@ -63,7 +63,7 @@
                 },
 				{
 					"tag": "¿Soy yo o solías verte mejor?",
-					"character2": "Miriam Neutral",
+					"character2": "Miriam Neutro",
 					"shader2": true,
                     "text": "“¿Soy yo o solías verte mejor?” Miriam deja su libro y voltea a verme con obvia indignación. Aprovechando su sorpresa, tomo el asiento frente a ella. "
                 },
@@ -101,14 +101,14 @@
                 },
 				{
 					"tag":"¿Qué estás leyendo esta vez?",
-					"character1": "Vamp Feli",
-					"character2": "Miriam Neutra",
+					"character1": "Vampiro Feliz",
+					"character2": "Miriam Neutro",
 					"shader2": true,
                     "text": "“¿Qué estás leyendo esta vez?” El libro de hoy es diferente al del día anterior. Mi corazón baila con la idea de un enorme librero adornando la sala de Miriam. Una mujer tan bella y tan culta inevitablemente ha de tener una morada bien decorada, con organización intachable. Por un momento, me pierdo en mis sueños de salas y comedores."
                 },
 				{
-					"character1": "Vamp Feliz",
-					"character2": "Miriam Neutra",
+					"character1": "Vampiro Feliz",
+					"character2": "Miriam Neutro",
 					"shader2": true,
                     "text": "“Es Voga. Salió apenas hace dos días” La cara de Miriam se ilumina al hablar. “Es de mi autor favorito, Mariano Maldonado.” Parece ser que somos dos soñadores – ella de libros y yo de decoración de interiores."
                 }

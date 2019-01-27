@@ -27,15 +27,15 @@ public class Player : MonoBehaviour
     {
         m_inventory = new Item[]
         {
-            new Item ("Cupones cafe", false),
-            new Item ("Cartel Disco", false),
-            new Item ("Anillo", false),
+            new Item ("Cafe ticket", false),
+            new Item ("Poster Disco", false),
+            new Item ("Ring", false),
             new Item ("Sombrero", false),
-            new Item ("Pipa", false),
-            new Item ("Bufanda", false),
-            new Item ("Moño", false),
+            new Item ("Pipe", false),
+            new Item ("scarf", false),
+            new Item ("Bun", false),
             new Item ("Collar", false),
-            new Item ("Libro", false)
+            new Item ("Book", false)
         };
 
         m_collider = GetComponent<BoxCollider2D>();
