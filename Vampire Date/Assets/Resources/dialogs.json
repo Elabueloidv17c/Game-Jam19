@@ -1033,6 +1033,211 @@
 				"character1": "Vamp Triste"
 			}
 		]
+		},
+		{
+			"dialogs": [
+			{
+				"tag": "Café",
+				"text": "Para mi fortuna, el día de hoy el café no está rebosando de gente. El olor del café revuelve mi estómago pero la promesa de comodidad me impulsa. Camino hacia las mesas del fondo pero cambio de dirección cuando veo a Miriam leyendo de nuevo. Me acerco a ella.",
+				"character1": "Vampiro Feliz",
+				"option1": "Nos encontramos de nuevo",
+				"option2": "Buenas tardes Miriam.",
+				"option3": "¿Soy yo o solías verte mejor?"
+			},
+			{
+				"tag": "Nos encontramos de nuevo.",
+				"text": "“Nos encontramos de nuevo.” Apoyo mi peso en la silla frente a mí. Miriam levanta la mirada y sonríe con curiosidad.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Neutral",
+				"shader2": true
+			},
+			{
+				"text": "“¿Has vuelto, Vampiro? Pensé que no eras fanático del café.” Mi sonrisa se vuelve más grande.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Feliz",
+				"shader1": true
+			},
+			{
+				"text": "“No, del café no. Pero hay otras cosas aquí que me interesan.” En particular, tú casa. Miriam arquea las cejas pero ríe y estira su mano, ofreciendo el asiento.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Feliz",
+				"shader2": true
+			},
+			{
+				"tag": "Buenas tardes, Miriam",
+				"text": "“Buenas tardes, Miriam.” Miriam no responde, sus ojos fijados en la página de su libro. “¿Miriam?” Por fin, voltea.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"text": "“Oh, disculpa. No me di cuenta de que estabas aquí.” Después de unos tensos segundos, rompo el silencio. “¿Puedo sentarme?” Miriam simplemente se encoje de hombros y regresa a su lectura.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"text": "La irritación vuelve mi sonrisa dura pero no hay nada de qué preocuparse. Es obvio que no me está prestando la más mínima atención.",
+				"character1": "Vampiro enojado",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"tag": "¿Soy yo o solías verte mejor?",
+				"text": "“¿Soy yo o solías verte mejor?” Miriam deja su libro y voltea a verme con obvia indignación. Aprovechando su sorpresa, tomo el asiento frente a ella.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"text": "“¿Disculpa? ¿Cómo te atreves?” Simplemente sonrío. “Disculpa princesa, pero esta mesa no te pertenece.” Es obvio que Miriam busca cambiar de asiento pero la mejor luz se encuentra en este.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Enojada"
+			},
+			{
+				"text": "Después de un momento, se resigna y continúa leyendo con frustración. A pesar de que mi actitud está siendo contraproducente, no puedo evitarlo. La maldad es parte de mi naturaleza.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Enojada",
+				"shader2": true
+			},
+			{
+				"text": "A pesar de que he logrado sentarme en la mesa de Miriam, no soy el centro de su atención. En este momento tengo un archienemigo – ese libro. Si quiero que mis planes funcionen debo alejar la atención de Miriam del odioso artículo. La moralidad, la sensatez y la vergüenza no han sido obstáculos para mí así que no hay manera de que seré derrotado por un bloque de papel.",
+				"character1": "Vampiro Neutro",
+				"character2": "Miriam Enojada",
+				"shader2": true,
+				"option1": "¿Qué estás leyendo esta vez?",
+				"option2": "Otra vez leyendo, ¿eh?",
+				"option3": "Deja eso."
+			},
+			{
+				"tag": "¿Qué estás leyendo esta vez?",
+				"text": "“¿Qué estás leyendo esta vez?” El libro de hoy es diferente al del día anterior. Mi corazón baila con la idea de un enorme librero adornando la sala de Miriam. Una mujer tan bella y tan culta inevitablemente ha de tener una morada bien decorada, con organización intachable. Por un momento, me pierdo en mis sueños de salas y comedores.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"text": "“Es Voga. Salió apenas hace dos días” La cara de Miriam se ilumina al hablar. “Es de mi autor favorito, Mariano Maldonado.” Parece ser que somos dos soñadores – ella de libros y yo de decoración de interiores.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Feliz",
+				"shader2": true
+			},
+			{
+				"tag": "Otra vez leyendo, eh?",
+				"text": "“Otra vez leyendo, eh?” Al hablar, escucho la más sutil nota de desesperación en mi voz. Si fuera un humano, tendría que controlar mi respiración. No puedo ponerme nervioso en estos momentos – mi futuro depende de ello.",
+				"character1": "Vampiro Neutro",
+				"character2": "Miriam Neutro",
+				"shader2": true
+			},
+			{
+				"text": "“Si, suelo leer.” Miriam no suena impresionada ni levanta la lista de la página. Es difícil suprimir un suspiro.",
+				"character1": "Vampiro Triste",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"tag": "Deja eso.",
+				"text": "“Deja eso.” Estiro mi brazo, tomando el libro de entre sus manos y se lo arrebato en un momento de sorpresa. Volteo las paginas sin cuidado, admirando la portada y el papel de alta calidad.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"text": "“Hey! Devuélveme eso!” Jugar con su libro es bastante entretenido, pero puedo sentir que si no cedo la situación va a empeorar. Volteando los ojos, le regreso el libro. Miriam me lo arrebata bruscamente y lo mete a su bolso, protegiéndolo de mí.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Enojada"
+			},
+			{
+				"text": "Miriam no es una persona muy platicadora pero su aura es abierta y amigable, como una habitación minimalista con grandes ventanas. Si juego bien mis cartas, disfrutare de la vista mañana.",
+				"character1": "Vampiro Neutro",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"tag": "Reaccion a regalos",
+				"text": "Es hora de sacar mi arma secreta. “Vi esto y me recordó a ti, Miriam.”",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"tag": "Positivo",
+				"text": "“Oh, wow! ¿Dónde encontraste esto?” Miriam sonríe. “Me encanta, gracias.”",
+				"character1": " Vampiro Feliz",
+				"character2": "Miriam Feliz",
+				"shader1": true
+			},
+			{
+				"tag": "Negativo",
+				"text": "“Oh…gracias.” Miriam lo observa con desdén. No hace ningún movimiento por tomarlo de mi mano.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Triste",
+				"shader1": true
+			},
+			{
+				"text": "Creo que el regalo ha sido un fracaso.",
+				"character1": "Vampiro Triste",
+				"character2": "Miriam Triste",
+				"shader2": true
+			},
+			{
+				"text": "Después de un momento, me levanto para comprar algo.",
+				"option1": "Comprar un café para Miriam",
+				"option2": "Comprar una galleta para Miriam",
+				"option3": "Comprar dos tés helados para mí"
+			},
+			{
+				"tag": "Comprar un café para Miriam",
+				"text": "Cuando regreso a la mesa de Miriam, coloco la taza frente a ella. “Para ti.” Miriam ojea la taza un momento antes de levantarla y tomar un trago. Sin romper el contacto visual, Miriam me sonríe. “Es mi favorito, gracias.”",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Feliz",
+				"shader1": true
+			},
+			{
+				"tag": "Comprar una galleta para Miriam",
+				"text": "Cuando regreso a la mesa de Miriam, coloco la galleta frente a ella. “Para ti.” Miriam ve la galleta y su expresión se llena de culpa. “Oh, Alan, muchas gracias pero no puedo comerla, soy alérgica al gluten.”",
+				"character1": "Vampiro feliz",
+				"character2": "Miriam Triste",
+				"shader1": true
+			},
+			{
+				"text": "Avergonzado, intento disculparme pero no logro formar las palabras. Abandono esa idea y comienzo a comer la galleta. El silencio es terriblemente incómodo",
+				"character1": "Vampiro Triste",
+				"character2": "Miriam Triste"
+			},
+			{
+				"tag": "Comprar dos tés helados para mí",
+				"text": "Cuando regreso a la mesa de Miriam, coloco ambos tes frente a ella. Miriam voltea con una sonrisa. “Ah, muchas gracias.” Su mano se estira para tomar uno de los tés pero le pego antes de que sus dedos puedan tocarlo",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Feliz",
+				"shader1": true
+			},
+			{
+				"text": "“¿Perdona princesa, pero ambos son míos. Soy un hombre…sediento, sabes?” Al hablar, lamo mis labios, observando su cuello detenidamente. Miriam baja su mano, avergonzada. “Oh…perdona.",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Triste",
+				"shader2": true
+			},
+			{
+				"text": "Por primera vez en todo el día, Miriam nos da un nuevo tema de conversación. “Entonces, Alan, cuéntame sobre ti. ¿A qué te dedicas?” Rio con incomodidad, es una pregunta complicada",
+				"character1": "Vampiro Neutro",
+				"character2": "Miriam Feliz",
+				"shader1": true,
+				"option1": "Mi trabajo no importa, sino mis pasiones",
+				"option2": "Perdí mi trabajo hace poco",
+				"option3": "No estoy hecho para trabajar"
+			},
+			{
+				"tag": "Mi trabajo no importa, sino mis pasiones",
+				"text": "“Mi trabajo no importa, sino mis pasiones. La rutina y la monotonía…no las soporto.” Miriam parece intrigada. Hace un movimiento con la mano, pidiendo que continúe. “Lo que verdaderamente amo…es la arquitectura y el diseño de interiores.”",
+				"character1": "Vampiro Feliz",
+				"character2": "Miriam Neutra",
+				"shader2": true
+			},
+			{
+				"text": "Eso sorprende a Miriam. Parpadea un par de veces, pero sonríe. “Debo admitir que me tomaste desapercibida. Pero me gusta eso en las personas.” Sus ojos brillan"
+			}
+			]
 		}
     ]
 }
