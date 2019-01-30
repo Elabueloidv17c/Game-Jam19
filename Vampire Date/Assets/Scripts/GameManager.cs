@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,7 +11,9 @@ public class GameManager : MonoBehaviour
     public Transform m_petyrHouse;
     public Transform m_miriamHouse;
     public Transform m_elizabethHouse;
-    
+
+    public Transform m_character1;
+    public Transform m_character2;
     public Transform m_dialog;
 
     public Transform m_woods;
@@ -90,14 +91,7 @@ public class GameManager : MonoBehaviour
             {
                 m_activeState = SceneLoaderState.IDLE;
                 //-------------------------------------------------
-                if (m_sceneBeingLoaded == -1)
-                {
-                    SceneManager.LoadScene(0);
-                }
-                else
-                {
-                    SetScene(m_sceneBeingLoaded);
-                }
+                SetScene(m_sceneBeingLoaded);
                 //-------------------------------------------------
                 Screen_Fader.FadeToClear();
             }
@@ -114,13 +108,6 @@ public class GameManager : MonoBehaviour
     public void WarptoLoadScene(int sceneLoading)
     {
         this.m_sceneBeingLoaded = sceneLoading;
-        Screen_Fader.FadeToBlack();
-        m_activeState = SceneLoaderState.LOADING_SCENE;
-    }
-
-    public void WarptoMainMenu()
-    {
-        this.m_sceneBeingLoaded = -1;
         Screen_Fader.FadeToBlack();
         m_activeState = SceneLoaderState.LOADING_SCENE;
     }
@@ -171,6 +158,8 @@ public class GameManager : MonoBehaviour
                     m_directions.gameObject.GetComponent<SpriteRenderer>().enabled = true;
 
                     m_canvas.gameObject.SetActive(false);
+                    m_character1.gameObject.SetActive(false);
+                    m_character2.gameObject.SetActive(false);
                     m_dialog.gameObject.SetActive(false);
 
                     m_miriamHouse.GetComponent<SpriteRenderer>().enabled = false;
@@ -181,11 +170,11 @@ public class GameManager : MonoBehaviour
                     m_cafe.GetComponent<SpriteRenderer>().enabled = false;
                     m_disco.GetComponent<SpriteRenderer>().enabled = false;
 
+                    SoundManager.m_instance.m_town.Play();
 
                     SoundManager.m_instance.m_intro.Stop();
                     SoundManager.m_instance.m_cafe.Stop();
                     SoundManager.m_instance.m_club.Stop();
-                    SoundManager.m_instance.m_town.Play();
                     SoundManager.m_instance.m_woods.Stop();
                     SoundManager.m_instance.m_elizabethHouse.Stop();
                     SoundManager.m_instance.m_miriamHouse.Stop();
@@ -194,10 +183,12 @@ public class GameManager : MonoBehaviour
 
                 case 2:
                     //Cafe
-                    m_dialog.gameObject.SetActive(true);
+                    m_canvas.gameObject.SetActive(true);
                     m_dialog.GetComponent<MainControl>().StartScene(index);
 
                     m_canvas.gameObject.SetActive(true);
+                    m_character1.gameObject.SetActive(true);
+                    m_character2.gameObject.SetActive(true);
 
                     m_bat.transform.position = new Vector3(0, 0, 0);
                     m_bat.gameObject.SetActive(false);
@@ -212,8 +203,9 @@ public class GameManager : MonoBehaviour
                     m_town.gameObject.GetComponent<SpriteRenderer>().enabled = false;
                     m_directions.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
-                    SoundManager.m_instance.m_intro.Stop();
                     SoundManager.m_instance.m_cafe.Play();
+
+                    SoundManager.m_instance.m_intro.Stop();
                     SoundManager.m_instance.m_club.Stop();
                     SoundManager.m_instance.m_town.Stop();
                     SoundManager.m_instance.m_woods.Stop();
@@ -224,7 +216,6 @@ public class GameManager : MonoBehaviour
 
                 case 3:
                     //Club
-
                     m_canvas.gameObject.SetActive(true);
                     m_dialog.GetComponent<MainControl>().StartScene(index);
 
@@ -242,9 +233,10 @@ public class GameManager : MonoBehaviour
                     m_town.gameObject.GetComponent<SpriteRenderer>().enabled = false;
                     m_directions.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
+                    SoundManager.m_instance.m_club.Play();
+
                     SoundManager.m_instance.m_intro.Stop();
                     SoundManager.m_instance.m_cafe.Stop();
-                    SoundManager.m_instance.m_club.Play();
                     SoundManager.m_instance.m_town.Stop();
                     SoundManager.m_instance.m_woods.Stop();
                     SoundManager.m_instance.m_elizabethHouse.Stop();
@@ -272,17 +264,18 @@ public class GameManager : MonoBehaviour
                     m_town.gameObject.GetComponent<SpriteRenderer>().enabled = false;
                     m_directions.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
+                    SoundManager.m_instance.m_woods.Play();
+
                     SoundManager.m_instance.m_intro.Stop();
                     SoundManager.m_instance.m_cafe.Stop();
                     SoundManager.m_instance.m_club.Stop();
                     SoundManager.m_instance.m_town.Stop();
-                    SoundManager.m_instance.m_woods.Play();
                     SoundManager.m_instance.m_elizabethHouse.Stop();
                     SoundManager.m_instance.m_miriamHouse.Stop();
 
                     break;
 
-                case 7:
+                case 6:
 
                     m_canvas.gameObject.SetActive(true);
                     m_dialog.GetComponent<MainControl>().StartScene(index);
@@ -301,17 +294,18 @@ public class GameManager : MonoBehaviour
                     m_town.gameObject.GetComponent<SpriteRenderer>().enabled = false;
                     m_directions.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
+                    SoundManager.m_instance.m_elizabethHouse.Play();
+
+                    SoundManager.m_instance.m_miriamHouse.Stop();
                     SoundManager.m_instance.m_intro.Stop();
+                    SoundManager.m_instance.m_woods.Stop();
                     SoundManager.m_instance.m_cafe.Stop();
                     SoundManager.m_instance.m_club.Stop();
                     SoundManager.m_instance.m_town.Stop();
-                    SoundManager.m_instance.m_woods.Stop();
-                    SoundManager.m_instance.m_elizabethHouse.Play();
-                    SoundManager.m_instance.m_miriamHouse.Stop();
 
                     break;
 
-                case 6:
+                case 7:
 
                     m_canvas.gameObject.SetActive(true);
                     m_dialog.GetComponent<MainControl>().StartScene(index);
@@ -330,13 +324,14 @@ public class GameManager : MonoBehaviour
                     m_town.gameObject.GetComponent<SpriteRenderer>().enabled = false;
                     m_directions.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
+                    SoundManager.m_instance.m_miriamHouse.Play();
+
+                    SoundManager.m_instance.m_elizabethHouse.Stop();
+                    SoundManager.m_instance.m_woods.Stop();
                     SoundManager.m_instance.m_intro.Stop();
                     SoundManager.m_instance.m_cafe.Stop();
                     SoundManager.m_instance.m_club.Stop();
                     SoundManager.m_instance.m_town.Stop();
-                    SoundManager.m_instance.m_woods.Stop();
-                    SoundManager.m_instance.m_elizabethHouse.Stop();
-                    SoundManager.m_instance.m_miriamHouse.Play();
 
                     break;
             }

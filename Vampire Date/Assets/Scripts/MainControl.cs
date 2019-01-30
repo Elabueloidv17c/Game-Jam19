@@ -81,16 +81,7 @@ public class MainControl : MonoBehaviour
 
     if(tag == "\n")
     {
-      return storyScript.scenes[sceneIndex].dialogs.Length;
-    }
-    else if(tag[0] == '\n')
-    {
-      GameManager.instance.WarptoLoadScene(Convert.ToInt32(tag.Substring(1)));
-      return 0;
-    }
-    else if (tag == "\t")
-    {
-      GameManager.instance.WarptoMainMenu();
+        return storyScript.scenes[sceneIndex].dialogs.Length;
     }
 
     for (int i = 0; i < storyScript.scenes[sceneIndex].dialogs.Length; i++)
