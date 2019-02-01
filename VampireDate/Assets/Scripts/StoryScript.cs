@@ -54,6 +54,8 @@ namespace StorySystem
       string src = reader.ReadToEnd();
       StoryScript res = null;
 
+      Debug.LogError("wtf");
+
       try
       {
         res = JsonUtility.FromJson<StoryScript>(src);

@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
     {
         m_activeState = SceneLoaderState.IDLE;
         m_lastScene = -1;
-        SetScene(0);
+        SetScene(3);
 
         Screen_Fader.FadeToClear();
     }
