@@ -44,17 +44,15 @@ namespace StorySystem
   [Serializable]
   public class StoryScript
   {
-    static string path = @"Assets/Resources/dialogs.json";
+    static string path = @"dialogs";
 
     public Scene[] scenes;
 
     public static StoryScript Load()
     {
-      var reader = new StreamReader(path);
-      string src = reader.ReadToEnd();
+      TextAsset reader = Resources.Load(path) as TextAsset;
+      string src = reader.text;
       StoryScript res = null;
-
-      Debug.LogError("wtf");
 
       try
       {

@@ -783,8 +783,6 @@ MonoBehaviour:
   m_petyrHouse: {fileID: 162754933}
   m_miriamHouse: {fileID: 2100775770}
   m_elizabethHouse: {fileID: 2141215420}
-  m_character1: {fileID: 1469406248}
-  m_character2: {fileID: 2082287315}
   m_dialog: {fileID: 570210718}
   m_woods: {fileID: 1151545369}
   m_town: {fileID: 987147409}
