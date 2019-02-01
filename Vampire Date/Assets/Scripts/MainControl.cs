@@ -97,7 +97,6 @@ public class MainControl : MonoBehaviour
     {
       GameManager.instance.WarptoLoadScene(SceneToLoad(tag));
       return 0;
-      //Necesito in indice valido para el inicio de la siguiente escena
     }
 
     if (index == -1)
